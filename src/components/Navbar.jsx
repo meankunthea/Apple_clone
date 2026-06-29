@@ -8,7 +8,7 @@ const Navbar = () => {
         
         {/* Apple logo */}
         <Link to="/" className="text-xl font-bold">
-          <img className="w-4 h-4" src="/images/logo.png" alt="logo" />
+          <img className="w-4 h-4" src="/images/home/45dfd13dacaf484f3462.svg" alt="logo" />
         </Link>
 
         {/* Links */}
@@ -26,10 +26,10 @@ const Navbar = () => {
 
         {/* Icons */}
         <button className="hover:text-black ">
-          <img className="w-4 h-4" src="/images/search_icon.png" alt="search" />
+          <img className="w-4 h-4" src="/images/home/search_icon.png" alt="search" />
         </button>
         <button className="hover:text-black">
-          <img className="w-4 h-4" src="/images/shopping_bag.png" alt="shopping_bag" />
+          <img className="w-4 h-4" src="/images/home/shopping_bag.png" alt="shopping_bag" />
         </button>
       </div>
 
