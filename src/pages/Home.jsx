@@ -18,11 +18,14 @@ export default function Home() {
 
         {/* Text on image */}
         <div className="absolute inset-0 flex flex-col items-center  text-center pt-20 ">
-          <h1 className="text-6xl font-semibold">Father's Day</h1>
-          <h4 className="text-2xl pt-2">It's not too late to find the perfect gift.</h4>
-          <button className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-3xl">
-            Shop
-          </button>
+          <h1 className="text-6xl font-semibold">iPhone 17</h1>
+          <h4 className="text-2xl pt-2">Magichromatic.</h4>
+          <div className="">
+            <button className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-3xl">
+              Shop
+            </button>
+            
+          </div>
         </div>
 
       </div>
