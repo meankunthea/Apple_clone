@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar'
-// import Footer from '../components/Footer'
+import Footer from '../components/Footer'
 
 function MainLayout({ children }) {
   return (
@@ -8,6 +8,7 @@ function MainLayout({ children }) {
       <main className="pt-11">
         {children}
       </main>
+      <Footer />
     </>
   )
 }

@@ -1,9 +1,9 @@
-import MainLayout from "../layouts/MainLayout"
+import Navbar from "../components/Navbar"
 
 function Accessories() {
   return (
-    <div>
-      
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Navbar/>
     </div>
   )
 }

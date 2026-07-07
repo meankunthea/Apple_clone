@@ -1,10 +1,10 @@
-import MainLayout from '../layouts/MainLayout'
+import Navbar from "../components/Navbar"
 
 function Mac() {
   return (
-    <MainLayout>
-      <h1>Mac Page</h1>
-    </MainLayout>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Navbar/>
+    </div>
   )
 }
 

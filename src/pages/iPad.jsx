@@ -1,12 +1,10 @@
-import MainLayout from "../layouts/MainLayout"
-
-
-const iPad = () => {
+import Navbar from "../components/Navbar"
+const IPad = () => {
   return (
-    <div>
-      
+   <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Navbar/>
     </div>
   )
 }
 
-export default iPad
+export default IPad
