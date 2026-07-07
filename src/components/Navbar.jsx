@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full h-12 bg-white backdrop-blur-md z-50">
       
-      <div className="flex items-center justify-center h-full gap-6 text-sm text-gray-700">
+      <div className="flex items-center justify-center h-full gap-6 text-sm text-[#1d1d1f]">
         
         {/* Apple logo */}
         <Link to="/" className="text-xl font-bold">
@@ -23,11 +23,11 @@ const Navbar = () => {
         </Link>
 
         {/* Links */}
-        <Link to="/store" className="hover:text-black">Store</Link>
-        <Link to="/mac" className="hover:text-black">Mac</Link>
-        <Link to="/ipad" className="hover:text-black">iPad</Link>
+        <Link to="/store" className=" text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]">Store</Link>
+        <Link to="/mac" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]">Mac</Link>
+        <Link to="/ipad" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]">iPad</Link>
         <div className="relative">
-          <button onClick={toggleIPhone} className="hover:text-black focus:outline-none">
+          <button onClick={toggleIPhone} className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f] focus:outline-none">
             iPhone
           </button>
           <div className={`pointer-events-none fixed inset-x-0 top-12 bottom-0 z-40 bg-white/15 backdrop-blur-sm transition duration-200 ${isIPhoneOpen ? 'opacity-100' : 'opacity-0'}`}></div>
@@ -69,13 +69,13 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <Link to="/watch" className="hover:text-black" onClick={closeIPhone}>Watch</Link>
-        <Link to="/vision" className="hover:text-black" onClick={closeIPhone}>Vision</Link>
-        <Link to="/airpods" className="hover:text-black" onClick={closeIPhone}>AirPods</Link>
-        <Link to="/tv-home" className="hover:text-black" onClick={closeIPhone}>TV & Home</Link>
-        <Link to="/entertainment" className="hover:text-black" onClick={closeIPhone}>Entertainment</Link>
-        <Link to="/accessories" className="hover:text-black" onClick={closeIPhone}>Accessories</Link>
-        <Link to="/support" className="hover:text-black" onClick={closeIPhone}>Support</Link>
+        <Link to="/watch" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={closeIPhone}>Watch</Link>
+        <Link to="/vision" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={closeIPhone}>Vision</Link>
+        <Link to="/airpods" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={closeIPhone}>AirPods</Link>
+        <Link to="/tv-home" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={closeIPhone}>TV & Home</Link>
+        <Link to="/entertainment" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={closeIPhone}>Entertainment</Link>
+        <Link to="/accessories" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={closeIPhone}>Accessories</Link>
+        <Link to="/support" className="text-[#1d1d1f] text-[12px] hover:text-black" onClick={closeIPhone}>Support</Link>
 
         {/* Icons */}
         <button className="hover:text-black ">
