@@ -1,10 +1,10 @@
-import MainLayout from "../layouts/MainLayout";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   // for slide show
@@ -88,7 +88,8 @@ export default function Home() {
   ];
 
   return (
-    <MainLayout>
+    <div>
+      <Navbar/>
       <div className="min-h-screen ">
         <style>{`
           .small-swiper-pagination {
@@ -440,6 +441,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </MainLayout>
+      <Footer/>
+    </div>
   );
 }

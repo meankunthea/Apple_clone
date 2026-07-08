@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full h-12 bg-white backdrop-blur-md z-50">
+    <nav className="fixed top-0 w-full h-12 bg-[#f5f5f7] backdrop-blur-md z-50">
       
       <div className="flex items-center justify-center h-full gap-6 text-sm text-[#1d1d1f]">
         
