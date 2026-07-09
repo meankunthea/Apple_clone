@@ -217,7 +217,7 @@ const Store = () => {
             </div>
           </div>
 
-          {/* Small product cards */}
+          {/* Categories products */}
           <div className="bg-[#f5f5f7] px-6 py-8">
             <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-[#1d1d1f] sm:gap-6">
               {categories.map((item) => (
