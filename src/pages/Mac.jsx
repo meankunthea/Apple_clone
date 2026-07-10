@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Plus } from "lucide-react";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
