@@ -109,8 +109,8 @@ const footerSections = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-200 bg-[#f5f5f7] text-[#6e6e73]">
-      <div className="mx-auto max-w-6xl px-3 py-10 sm:px-4 lg:px-6 lg:py-14">
+    <footer className=" bg-[#f5f5f7] text-[#6e6e73]">
+      <div className="mx-auto max-w-6xl px-3 sm:px-4 lg:px-6">
         <div className="mb-6 text-[12px]  text-[#6e6e73]">
           <p className="mb-4">
             1. Trade‑in values will vary based on the condition, year, and

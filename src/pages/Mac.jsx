@@ -1,10 +1,8 @@
 import Navbar from "../components/Navbar";
 import { useState, useRef } from "react";
-import { Plus } from "lucide-react";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import BigCard from "./BigCard";
-import { ChevronUp } from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
+import BigCard from "../components/BigProductCard";
 
 const categories = [
   { name: "MacBook Neo", image: "/images/Mac/education_bdd3e67fa_2x.jpg" },
@@ -49,6 +47,7 @@ const categories = [
     name: "Golden Gate",
     image: "/images/Mac/nav_macos_eba0c550e_2x.png",
   },
+  
 ];
 
 // Explore lineup products
@@ -324,32 +323,43 @@ function Mac() {
   const [activeTab, setActiveTab] = useState("All products");
   const [activeFeature, setActiveFeature] = useState(0);
 
-  //Category Products
+  const categoryRef = useRef(null);
   const lineupRef = useRef(null);
   const scrollRef = useRef(null);
-  const scrollLeft = () => {
-    scrollRef.current?.scrollBy({
+
+  const scrollCategoryLeft = () => {
+    categoryRef.current?.scrollBy({
       left: -400,
       behavior: "smooth",
     });
   };
-  const scrollRight = () => {
-    console.log("Right clicked");
-    console.log(scrollRef.current);
 
-    scrollRef.current?.scrollBy({
+  const scrollCategoryRight = () => {
+    categoryRef.current?.scrollBy({
       left: 400,
       behavior: "smooth",
     });
   };
 
-  // lineupProducts
+  const scrollExploreLeft = () => {
+    lineupRef.current?.scrollBy({
+      left: -400,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollExploreRight = () => {
+    lineupRef.current?.scrollBy({
+      left: 400,
+      behavior: "smooth",
+    });
+  };
+
   const filteredProducts =
     activeTab === "All products"
       ? lineupProducts
       : lineupProducts.filter((item) => item.category === activeTab);
 
-  // Products
   const scroll = (direction) => {
     if (!scrollRef.current) return;
 
@@ -359,9 +369,9 @@ function Mac() {
     });
   };
   return (
-    <div className="flex flex-col items-center min-h-screen py-2">
+    <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2">
       <Navbar />
-      <div className="min-h-screen bg-white mx-auto px-[80px] pt-[48px]">
+      <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f5f5f7] mx-auto pt-12 ">
         <div className="w-full h-[58px] flex items-center justify-center border-b border-gray-100 bg-white text-center ">
           <p className="text-[14px] text-[#1d1d1f]">
             Now you can buy Apple Watch with Education savings.
@@ -371,64 +381,66 @@ function Mac() {
           </a>
         </div>
 
-        <main className="flex w-full relative z-0 flex-col gap-12 px-4  sm:px-6 lg:px-8  pl-[140px]">
+        <main className="flex w-full max-w-full relative z-0 flex-col gap-12 overflow-x-hidden">
           {/* Mac Text */}
-          <div className="flex h-[228px] w-full items-center px-8 ">
-            <div className=" ">
-              <h1 className="text-[80px] font-bold text-[#1d1d1f]">Mac</h1>
+          <div className="w-full bg-[#f5f5f7]">
+            <div className="flex h-[228px] w-full items-center px-32 bg-white">
+              <div className=" ">
+                <h1 className="text-[80px] font-bold text-[#1d1d1f]">Mac</h1>
+              </div>
             </div>
-          </div>
 
-          {/* Category products */}
-          <div className="bg-white px-6 ">
-            {/* Arrows */}
+            {/* Category products */}
+            <div className="bg-white px-28 pb-12">
+              {/* Arrows */}
 
-            {/* Categories */}
-            <div
-              ref={scrollRef}
-              className="mb-6 flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
-            >
-              {categories.map((item) => (
-                <div
-                  key={item.name}
-                  className="group flex-shrink-0 flex h-[148px] w-[136px] flex-col items-center justify-center gap-2"
+              {/* Categories */}
+              <div
+                ref={categoryRef}
+                className="flex max-w-full gap-6 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
+                {categories.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group flex-shrink-0 flex h-36 w-32 flex-col items-center justify-center gap-2"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="h-[78px] w-[120px] object-contain"
+                    />
+                    <span className="text-center text-[12px] font-medium group-hover:underline">
+                      {item.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="relative z-1000 flex justify-end gap-3 mt-4">
+                <button
+                  onClick={scrollCategoryLeft}
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
                 >
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="h-[78px] w-[120px] object-contain"
-                  />
-                  <span className="text-center text-[12px] font-medium group-hover:underline">
-                    {item.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="relative z-1000 flex justify-end gap-3 mt-4">
-              <button
-                onClick={scrollLeft}
-                className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
-              >
-                <ChevronLeft />
-              </button>
+                  <ChevronLeft />
+                </button>
 
-              <button
-                onClick={scrollRight}
-                className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
-              >
-                <ChevronRight />
-              </button>
+                <button
+                  onClick={scrollCategoryRight}
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
+                >
+                  <ChevronRight />
+                </button>
+              </div>
             </div>
           </div>
 
-          <div className="w-full bg-[#f5f5f7] ">
+          <div className="w-full bg-[#f5f5f7] px-32">
             <h2 className="text-[48px] font-semibold text-[#1d1d1f] mb-10">
               Explore the lineup.
             </h2>
 
             {/* Tabs */}
 
-            <div className="inline-flex bg-[#e8e8ed] rounded-full p-1 mb-14">
+            <div className="inline-flex bg-[#e8e8ed] rounded-full p-1">
               {["All products", "Laptops", "Desktops", "Displays"].map(
                 (tab) => (
                   <button
@@ -443,11 +455,25 @@ function Mac() {
               )}
             </div>
 
-            {/* LineupProducts */}
+            {/* Products */}
+            <div className="mb-6 flex justify-end gap-3">
+              <button
+                onClick={scrollExploreLeft}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronLeft />
+              </button>
 
+              <button
+                onClick={scrollExploreRight}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronRight />
+              </button>
+            </div>
             <div
               ref={lineupRef}
-              className="w-full flex gap-10 overflow-x-auto overflow-y-hidden scroll-smooth scrollbar-hide"
+              className="flex w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             >
               {filteredProducts.map((item) => (
                 <div
@@ -500,17 +526,11 @@ function Mac() {
           </div>
 
           {/* Products */}
-          <section className="bg-[#f5f5f7] w-full">
+          <section className="bg-[#f5f5f7] w-full px-32">
             {/* Header */}
             <div className="max-w-[1440px] mx-auto flex justify-between items-end mb-10">
               <h2
-                className="
-          text-[48px]
-
-          font-bold
-
-          text-[#1d1d1f]
-        "
+                className="text-[48px] font-bold text-[#1d1d1f] "
               >
                 Why Apple is the best
                 <br />
@@ -533,15 +553,7 @@ function Mac() {
             {/* Cards */}
             <div
               ref={scrollRef}
-              className="
-        flex
-        gap-4
-        overflow-x-auto
-        pl-[calc((100vw-1322px)/2)]
-        pr-10
-        scroll-smooth
-        no-scrollbar
-        "
+              className="flex gap-4 overflow-x-auto pl-[calc((100vw-1322px)/2)] pr-10 scroll-smooth no-scrollbar "
             >
               {products.map((item, index) => (
                 <div
@@ -675,25 +687,16 @@ function Mac() {
 
           <section className="bg-[#f5f5f7] w-full">
             {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex  pt-4">
-              <h2
-                className="
-          text-[48px]
-
-          font-bold
-
-          text-[#1d1d1f]
-        "
-              >
+            <div className="max-w-[1440px] mx-auto flex pt-4 px-32 py-12">
+              <h2 className="text-[48px] font-bold text-[#1d1d1f]">
                 Get to Know Mac.
               </h2>
             </div>
 
             {/* Cards */}
 
-            <div
-              ref={scrollRef}
-              className="
+            <div ref={scrollRef}
+              className=" px-32
     flex
     flex-row
     gap-4
@@ -765,7 +768,7 @@ function Mac() {
           </section>
 
           {/* BigCard 1 */}
-          <div className="h-[861px] bg-[#f5f5f7] pt-[144px]  ">
+          <div className="h-auto bg-[#f5f5f7] pt-12   px-32">
             <p className="text-[#1d1d1f] text-[48px] font-semibold ">
               Switch to Mac.
             </p>
@@ -777,7 +780,7 @@ function Mac() {
           </div>
 
           {/* BigCard 2*/}
-          <div className="h-[861px] bg-[#f5f5f7] pt-[144px]  ">
+          <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
             <p className="text-[#1d1d1f] text-[48px] font-semibold ">
               Mac Essentials.
             </p>
@@ -790,8 +793,8 @@ function Mac() {
           <section className="bg-white py-24">
             {/* Header */}
 
-            <div className="max-w-[1440px]  ">
-              <div className="flex justify-between items-center mb-12">
+            <div className="max-w-auto px-32">
+              <div className="flex justify-between items-center">
                 <h2 className="text-[48px] font-semibold text-[#1d1d1f] tracking-[-0.02em]">
                   Unlock the world of Apple.
                 </h2>

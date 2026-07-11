@@ -818,8 +818,8 @@ const Store = () => {
           </div>
           {/* Text on Footer */}
 
-          <section className="bg-[#f5f5f7]">
-            <div className="max-w-[980px] mx-auto px-6 py-10 text-[12px]  text-[#6e6e73]">
+          <section className="bg-[#f5f5f7] -mb-8">
+            <div className="max-w-auto mx-auto px-7 text-[12px]  text-[#6e6e73]">
               <p className="mb-3">
                 ◊ Apple Watch Hermès is not eligible for education savings.
               </p>
@@ -918,13 +918,9 @@ const Store = () => {
               <p className="mb-3">
                 Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) Verizon monthly bill credits applied over 36 months. Customer must remain in the Verizon Device Payment Program for 36 months to receive the full benefit of the Verizon bill credits. Bill credits may take 1-2 bill cycles to appear. If it takes two cycles for bill credits to appear, you’ll see the credit for the first cycle on your second bill in addition to that month’s credit. Requires purchase and activation of a new iPhone 17e with the Verizon Device Payment Program at 0% APR for 36 months, subject to Verizon credit qualification, and iPhone availability and limits. Taxes and shipping not included in monthly price. Sales tax may be assessed on full value of new iPhone. Requires eligible unlimited Verizon mobile plan. Requires trade-in of eligible device. Must be at least 18 to trade-in. Apple or its trade-in partners reserve the right to refuse or limit any trade-in transaction for any reason. In-store trade-in requires presentation of a valid, government-issued photo ID (local law may require saving this information). In-store promotion availability subject to local law; speak to a Specialist to learn more. Limited-time offer; subject to change. Additional terms from Apple, Verizon, and Apple’s trade-in partners may apply.
               </p>
-               <p className="mb-3">
+               <p>
                 AT&T iPhone 16 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of AT&T bill credit applied over 36 months. Requires upgrade of an existing line or activation of a new line. Customers upgrading or activating a new line and buying an iPhone 16 128 GB will get $441.36 in bill credits. Requires purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. If you are trading in a device with this deal, credits will be comprised of (i) Apple instant trade-in credit at checkout and (ii) AT&T monthly bill credits applied over 36 months. Requires purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. $0 down for well-qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&T unlimited plan. AT&T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Bill credits are applied as a monthly credit over the 36-month installment plan. Credits start within 3 bills. Will receive catch-up credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited-time offer; subject to change. Limits: one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Activation required.
               </p>
-               
-               
-
-
             </div>
           </section>
           <Footer />
