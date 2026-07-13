@@ -18,7 +18,7 @@ const BigProductCard = ({
           </span>
         )}
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 px-6 py-6 text-white">
+        <div className="absolute inset-0  px-6 py-6 ">
           <div className="pt-8 space-y-1">
             <h3 className="text-[28px] text-[#1d1d1f] font-semibold">
               {title}
