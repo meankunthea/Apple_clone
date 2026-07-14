@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
 import { useState, useRef } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
-// import BigCard from "../components/BigProductCard";
+import BigCard from "../components/BigProductCard";
 
 const categories = [
   { name: "iPad Pro", image: "/images/iPad/education_bdd3e67fa_2x.jpg" },
@@ -29,7 +29,7 @@ const categories = [
     image: "/images/Mac/nav_compare_5c5c25766_2x.png",
   },
   {
-    name: "Accessories",
+    name: "Covers & Cases",
     image: "/images/Mac/nav_displays_e08c5b904_2x.png",
   },
   {
@@ -43,18 +43,19 @@ const categories = [
   {
     name: "Shop iPad",
     image: "/images/Mac/nav_macos_eba0c550e_2x.png",
-  },
+  }
+  
 ];
 
 // Explore lineup products
 const lineupProducts = [
   {
     id: 1,
+    slug: "ipad-pro",
     category: "iPad Pro",
     image: "/images/Mac/mbn_0cd16ed14_2x (1).jpg",
     name: "iPad Pro",
-    description:
-      "The ultimate iPad experience with the most advanced technology.",
+    description: "The ultimate iPad experience with the most advanced technology.",
     price: "From $699 or $58.25/mo.",
     colors: [
       "/images/Mac/color1.png",
@@ -66,6 +67,7 @@ const lineupProducts = [
   },
   {
     id: 2,
+    slug: "ipad-air",
     category: "Laptops",
     image: "/images/Mac/mba_13_15_7482a7376_2x.jpg",
     name: "iPad Air",
@@ -82,11 +84,11 @@ const lineupProducts = [
 
   {
     id: 3,
+    slug: "ipad",
     category: "Laptops",
     image: "/images/Mac/mbp_14_16_304f8e722_2x.jpg",
     name: "iPad",
-    description:
-      "The colorful, all‑screen iPad for the things you do every day.",
+    description: "The colorful, all‑screen iPad for the things you do every day.",
     price: "From $699 or $58.25/mo.",
     colors: [
       "/images/Mac/color1.png",
@@ -99,6 +101,7 @@ const lineupProducts = [
 
   {
     id: 4,
+    slug: "ipad-mini",
     category: "Desktops",
     image: "/images/Mac/imac_24_9168aa3d6_2x.jpg",
     name: "iPad mini",
@@ -111,7 +114,7 @@ const lineupProducts = [
       "/images/Mac/color4.png",
       "/images/Mac/color5.png",
     ],
-  },
+  }
 ];
 
 //Products
@@ -215,6 +218,24 @@ const product = [
   },
 ];
 
+// BigCard
+const bigCards = [
+  {
+    id: 1,
+    title: "Give us the old. Save on\nthe new",
+    description:
+      "with Apple trade in, you can get a great value for\nyou current device and apply it toward a new one.\nIf youyr device isn't eligible for credit, we'll recycle it   for free.",
+    image: "/images/Mac/trade_in_f0404b799_2x.png",
+    subtitle: "See What your device is worth >",
+  },
+  {
+    id: 2,
+    title: "Give us the old. Save on\nthe new",
+    description: "Show how easy it move to Mac.",
+    image: "/images/Mac/mac_does_that_118f02192_2x.png",
+    subtitle: "Learn more >",
+  },
+];
 
 const appleFeatures = [
   {
@@ -240,6 +261,7 @@ const appleFeatures = [
   },
 ];
 function iPad() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("All products");
   const [activeFeature, setActiveFeature] = useState(0);
 
@@ -434,7 +456,10 @@ function iPad() {
                   </p>
 
                   <div className="flex justify-center gap-8 mt-8">
-                    <button className="bg-[#0071e3] text-white px-8 py-3 rounded-full">
+                    <button 
+                      onClick={() => navigate(`/product/${item.slug}`)}
+                      className="bg-[#0071e3] text-white px-8 py-3 rounded-full"
+                    >
                       Learn more
                     </button>
 
@@ -449,7 +474,9 @@ function iPad() {
           <section className="bg-[#f5f5f7] w-full px-32">
             {/* Header */}
             <div className="max-w-[1440px] mx-auto flex justify-between items-end mb-10">
-              <h2 className="text-[48px] font-bold text-[#1d1d1f] ">
+              <h2
+                className="text-[48px] font-bold text-[#1d1d1f] "
+              >
                 Why Apple is the best
                 <br />
                 place to buy iPad.
@@ -613,8 +640,7 @@ function iPad() {
 
             {/* Cards */}
 
-            <div
-              ref={scrollRef}
+            <div ref={scrollRef}
               className=" px-32
     flex
     flex-row
@@ -686,6 +712,7 @@ function iPad() {
             </div>
           </section>
 
+          
           <section className="bg-white py-24">
             {/* Header */}
 

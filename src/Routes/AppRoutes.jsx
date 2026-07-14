@@ -11,6 +11,7 @@ import TVHome from "../pages/TVHome";
 import Entertainment from "../pages/Entertainment";
 import Accessories from "../pages/Accessories";
 import Support from "../pages/Support";
+import ProductDetailScreen from "../components/ProductDetailScreen";
 
 function AppRoutes() {
   return (
@@ -27,6 +28,7 @@ function AppRoutes() {
       <Route path="/entertainment" element={<Entertainment />} />
       <Route path="/accessories" element={<Accessories />} />
       <Route path="/support" element={<Support />} />
+      <Route path="/product/:slug" element={<ProductDetailScreen />} />
     </Routes>
   );
 }

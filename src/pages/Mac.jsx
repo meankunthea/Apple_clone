@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
 import BigCard from "../components/BigProductCard";
@@ -54,6 +55,7 @@ const categories = [
 const lineupProducts = [
   {
     id: 1,
+    slug: "macbook-neo",
     category: "Laptops",
     image: "/images/Mac/mbn_0cd16ed14_2x (1).jpg",
     name: "MacBook Neo",
@@ -69,6 +71,7 @@ const lineupProducts = [
   },
   {
     id: 2,
+    slug: "macbook-air",
     category: "Laptops",
     image: "/images/Mac/mba_13_15_7482a7376_2x.jpg",
     name: "MacBook Air 13 &15",
@@ -85,6 +88,7 @@ const lineupProducts = [
 
   {
     id: 3,
+    slug: "macbook-pro-14",
     category: "Laptops",
     image: "/images/Mac/mbp_14_16_304f8e722_2x.jpg",
     name: "MacBook Pro 14",
@@ -101,6 +105,7 @@ const lineupProducts = [
 
   {
     id: 4,
+    slug: "imac",
     category: "Desktops",
     image: "/images/Mac/imac_24_9168aa3d6_2x.jpg",
     name: "iMac",
@@ -116,6 +121,7 @@ const lineupProducts = [
   },
   {
     id: 5,
+    slug: "mac-mini",
     category: "Desktops",
     image: "/images/Mac/mac_mini_0688a3785_2x.jpg",
     name: "Mac mini",
@@ -131,6 +137,7 @@ const lineupProducts = [
   },
   {
     id: 6,
+    slug: "mac-studio",
     category: "Desktops",
     image: "/images/Mac/mac_studio_3170621a5_2x.jpg",
     name: "Mac Studio",
@@ -320,6 +327,7 @@ const appleFeatures = [
   },
 ];
 function Mac() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("All products");
   const [activeFeature, setActiveFeature] = useState(0);
 
@@ -514,7 +522,10 @@ function Mac() {
                   </p>
 
                   <div className="flex justify-center gap-8 mt-8">
-                    <button className="bg-[#0071e3] text-white px-8 py-3 rounded-full">
+                    <button 
+                      onClick={() => navigate(`/product/${item.slug}`)}
+                      className="bg-[#0071e3] text-white px-8 py-3 rounded-full"
+                    >
                       Learn more
                     </button>
 

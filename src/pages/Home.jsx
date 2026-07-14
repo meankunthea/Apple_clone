@@ -3,6 +3,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -132,9 +133,12 @@ export default function Home() {
             <h1 className="text-5xl font-semibold">iPhone 17</h1>
             <h4 className="text-2xl pt-2">Magichromatic.</h4>
             <div className="">
-              <button className="mt-4 bg-[#0066CC] text-white px-6 py-2 rounded-3xl">
+              <Link
+                to="/product/iphone-17"
+                className="mt-4 inline-flex bg-[#0066CC] text-white px-6 py-2 rounded-3xl"
+              >
                 Shop
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -151,12 +155,18 @@ export default function Home() {
             <h1 className="text-5xl text-white font-semibold">iPhone 17 Pro</h1>
             <h4 className="text-2xl text-white mt-2">All out Pro.</h4>
             <div className="space-x-4">
-              <button className="mt-6 bg-[#0066CC] text-white px-6 py-2 rounded-3xl">
+              <Link
+                to="/product/iphone-17-pro"
+                className="mt-6 inline-flex bg-[#0066CC] text-white px-6 py-2 rounded-3xl"
+              >
                 Learn more
-              </button>
-              <button className="mt-6  text-[#0066CC] border border-blue-500 px-6 py-2 rounded-3xl transition-colors duration-200 hover:bg-[#0066CC] hover:text-white">
+              </Link>
+              <Link
+                to="/product/iphone-17-pro"
+                className="mt-6 inline-flex text-[#0066CC] border border-blue-500 px-6 py-2 rounded-3xl transition-colors duration-200 hover:bg-[#0066CC] hover:text-white"
+              >
                 Buy
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -171,12 +181,18 @@ export default function Home() {
             <h1 className="text-5xl font-semibold">MacBook</h1>
             <h4 className="text-2xl mt-2">Meet the latest iPhone lineup.</h4>
             <div className="space-x-4">
-              <button className="mt-6 bg-[#0066CC] text-white px-6 py-2 rounded-3xl">
+              <Link
+                to="/product/macbook-air"
+                className="mt-6 inline-flex bg-[#0066CC] text-white px-6 py-2 rounded-3xl"
+              >
                 Learn more
-              </button>
-              <button className="mt-6 text-[#0066CC] border border-blue-500 px-6 py-2 rounded-3xl transition-colors duration-200 hover:bg-[#0066CC] hover:text-white">
+              </Link>
+              <Link
+                to="/product/macbook-air"
+                className="mt-6 inline-flex text-[#0066CC] border border-blue-500 px-6 py-2 rounded-3xl transition-colors duration-200 hover:bg-[#0066CC] hover:text-white"
+              >
                 Buy
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -193,7 +209,7 @@ export default function Home() {
 
             <div className="absolute top-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-center gap-2">
               <img
-                src="/images/home/promo_logo_ipad_air__dqdj4ni03quu_medium_2x.png"
+                src="/images/home/promo_logo_ipad_air__dqdj4ni03quu_small_2x.png"
                 alt="Logo"
                 className="w-28 "
               />
@@ -348,14 +364,14 @@ export default function Home() {
         </div>
 
         {/* Fifth section */}
-        <div className="mt-3 w-full h-[957px] overflow-hidden bg-[#f5f5f7]">
+        <div className="mt-3 w-full h-[957px] overflow-hidden">
           <h1 className="text-6xl text-center pt-10">Endless entertainment.</h1>
           {/* Big slide section */}
           <div className="mt-8 px-5">
             <Swiper
               modules={[Autoplay]}
               slidesPerView={3}
-              spaceBetween={12}
+              spaceBetween={20}
               loop={true}
               autoplay={{
                 delay: 2000,
@@ -364,7 +380,7 @@ export default function Home() {
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-full h-[523px] overflow-hidden ">
+                  <div className="relative w-[930px] h-[523px] overflow-hidden ">
                     <img
                       src={slide.image}
                       alt={slide.title}
@@ -386,12 +402,12 @@ export default function Home() {
             </Swiper>
           </div>
           {/* Small slides section */}
-          <div className="mt-3 ">
+          <div className="mt-4 px-5">
             <div className="relative">
               <Swiper
                 modules={[Pagination, Navigation]}
                 slidesPerView="auto"
-                spaceBetween={12}
+                spaceBetween={8}
                 loop={true}
                 pagination={{ clickable: true, el: ".small-swiper-pagination" }}
                 navigation={{
