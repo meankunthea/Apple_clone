@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
 import BigCard from "../components/BigProductCard";
+// import MacDropdown from "../components/MacDropdown";
+import Footer from '../components/Footer'
 
 const categories = [
   { name: "MacBook Neo", image: "/images/Mac/education_bdd3e67fa_2x.jpg" },
@@ -44,11 +46,6 @@ const categories = [
     name: "Golden Gate",
     image: "/images/Mac/nav_macos_eba0c550e_2x.png",
   },
-  {
-    name: "Golden Gate",
-    image: "/images/Mac/nav_macos_eba0c550e_2x.png",
-  },
-  
 ];
 
 // Explore lineup products
@@ -66,7 +63,6 @@ const lineupProducts = [
       "/images/Mac/color2.png",
       "/images/Mac/color3.png",
       "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
     ],
   },
   {
@@ -82,7 +78,6 @@ const lineupProducts = [
       "/images/Mac/color2.png",
       "/images/Mac/color3.png",
       "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
     ],
   },
 
@@ -94,13 +89,7 @@ const lineupProducts = [
     name: "MacBook Pro 14",
     description: "The magic of Mac at a surprising price.",
     price: "From $699 or $58.25/mo.",
-    colors: [
-      "/images/Mac/color1.png",
-      "/images/Mac/color2.png",
-      "/images/Mac/color3.png",
-      "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
-    ],
+    colors: ["/images/Mac/color1.png", "/images/Mac/color2.png"],
   },
 
   {
@@ -117,6 +106,8 @@ const lineupProducts = [
       "/images/Mac/color3.png",
       "/images/Mac/color4.png",
       "/images/Mac/color5.png",
+      "/images/Mac/color6.png",
+      "/images/Mac/color5.png",
     ],
   },
   {
@@ -127,13 +118,7 @@ const lineupProducts = [
     name: "Mac mini",
     description: "The magic of Mac at a surprising price.",
     price: "From $699 or $58.25/mo.",
-    colors: [
-      "/images/Mac/color1.png",
-      "/images/Mac/color2.png",
-      "/images/Mac/color3.png",
-      "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
-    ],
+    colors: [],
   },
   {
     id: 6,
@@ -143,13 +128,7 @@ const lineupProducts = [
     name: "Mac Studio",
     description: "The magic of Mac at a surprising price.",
     price: "From $699 or $58.25/mo.",
-    colors: [
-      "/images/Mac/color1.png",
-      "/images/Mac/color2.png",
-      "/images/Mac/color3.png",
-      "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
-    ],
+    colors: [],
   },
   {
     id: 7,
@@ -158,13 +137,7 @@ const lineupProducts = [
     name: "Studio Display",
     description: "The magic of Mac at a surprising price.",
     price: "From $699 or $58.25/mo.",
-    colors: [
-      "/images/Mac/color1.png",
-      "/images/Mac/color2.png",
-      "/images/Mac/color3.png",
-      "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
-    ],
+    colors: [],
   },
   {
     id: 8,
@@ -173,13 +146,7 @@ const lineupProducts = [
     name: "Studio Display XDR",
     description: "The magic of Mac at a surprising price.",
     price: "From $699 or $58.25/mo.",
-    colors: [
-      "/images/Mac/color1.png",
-      "/images/Mac/color2.png",
-      "/images/Mac/color3.png",
-      "/images/Mac/color4.png",
-      "/images/Mac/color5.png",
-    ],
+    colors: [],
   },
 ];
 
@@ -235,7 +202,13 @@ const product = [
   {
     id: 2,
     titleSmall: "Built For AI",
-    title: "Smart. Secure.\nOn Device.",
+    title: (
+  <>
+    Smart. Secure.
+    <br />
+    On Device.
+  </>
+),
     image: "/images/Mac/fc_intelligence_69d4bf8c2_2x.jpg",
     textColor: "text-white",
   },
@@ -249,14 +222,26 @@ const product = [
   {
     id: 4,
     titleSmall: "Mac + iPhone",
-    title: "Together they \nwork wonders.",
-    image: "/images/Mac/fc_iphone_1a4c9f1e5_2x  .jpg",
+    title: (
+  <>
+    Together they
+    <br />
+    work wonders.
+  </>
+),
+    image: "/images/Mac/fc_iphone_1a4c9f1e5_2x.jpg",
     textColor: "text-[#1d1d1f]",
   },
   {
     id: 5,
     titleSmall: "Compatibility",
-    title: "Mac runs your\n favorite apps.",
+    title: (
+  <>
+    Mac run your
+    <br />
+   Favorite app.
+  </>
+),
     desc: "Choose your chip, memory, storage, even color.",
     image: "/images/Mac/fc_compatibility_e94c0f8a8_2x.jpg",
     textColor: "text-[#1d1d1f]",
@@ -288,17 +273,35 @@ const product = [
 const bigCards = [
   {
     id: 1,
-    title: "Give us the old. Save on\nthe new",
-    description:
-      "with Apple trade in, you can get a great value for\nyou current device and apply it toward a new one.\nIf youyr device isn't eligible for credit, we'll recycle it   for free.",
+    title: "Give us the old. \nSave on the new",
+    description: "With Apple trand in, you can get a great value of your currecnt device and apply it for credit, we'll recycle it for free.",
+    subtitle: "See what your device is worth >",
     image: "/images/Mac/trade_in_f0404b799_2x.png",
-    subtitle: "See What your device is worth >",
+    
   },
   {
     id: 2,
-    title: "Give us the old. Save on\nthe new",
-    description: "Show how easy it move to Mac.",
+    title: "Mac does that.",
+    description: "See how easy it is to move to Mac.",
     image: "/images/Mac/mac_does_that_118f02192_2x.png",
+    subtitle: "Learn more >",
+  },
+];
+
+const bigCard = [
+  {
+    id: 1,
+    title: "Mac accessoreis",
+    description: "Explore keyboards, mice, and other essentials",
+    subtitle: "Shop Mac accessories >",
+    image: "/images/Mac/accessories_d945ccf53_2x.png",
+    
+  },
+  {
+    id: 2,
+    title: "Mac does that.",
+    description: "See how easy it is to move to Mac.",
+    image: "/images/Mac/studio_display_5624b03ba_2x.jpg",
     subtitle: "Learn more >",
   },
 ];
@@ -377,11 +380,11 @@ function Mac() {
     });
   };
   return (
-    <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2">
+    <div className="flex flex-col  items-center w-full min-h-screen overflow-x-hidden py-2 bg-[#f5f5f7]">
       <Navbar />
-      <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f5f5f7] mx-auto pt-12 ">
-        <div className="w-full h-[58px] flex items-center justify-center border-b border-gray-100 bg-white text-center ">
-          <p className="text-[14px] text-[#1d1d1f]">
+      <div className="min-h-screen w-full max-w-full overflow-x-hidden  mx-auto pt-12 ">
+        <div className="w-full h-[58px] flex items-center justify-center  text-center ">
+          <p className="text-[14px] text-[#1d1d1f] bg-[#f5f5f7]">
             Now you can buy Apple Watch with Education savings.
           </p>
           <a href="#" className="ml-1 text-[14px] text-[#0066cc]">
@@ -464,24 +467,10 @@ function Mac() {
             </div>
 
             {/* Products */}
-            <div className="mb-6 flex justify-end gap-3">
-              <button
-                onClick={scrollExploreLeft}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
-              >
-                <ChevronLeft />
-              </button>
 
-              <button
-                onClick={scrollExploreRight}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
-              >
-                <ChevronRight />
-              </button>
-            </div>
             <div
               ref={lineupRef}
-              className="flex w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              className="flex w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pt-10"
             >
               {filteredProducts.map((item) => (
                 <div
@@ -522,7 +511,7 @@ function Mac() {
                   </p>
 
                   <div className="flex justify-center gap-8 mt-8">
-                    <button 
+                    <button
                       onClick={() => navigate(`/product/${item.slug}`)}
                       className="bg-[#0071e3] text-white px-8 py-3 rounded-full"
                     >
@@ -534,15 +523,28 @@ function Mac() {
                 </div>
               ))}
             </div>
+            <div className="mb-6 flex justify-end gap-3 pt-10">
+              <button
+                onClick={scrollExploreLeft}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronLeft />
+              </button>
+
+              <button
+                onClick={scrollExploreRight}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronRight />
+              </button>
+            </div>
           </div>
 
           {/* Products */}
           <section className="bg-[#f5f5f7] w-full px-32">
             {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex justify-between items-end mb-10">
-              <h2
-                className="text-[48px] font-bold text-[#1d1d1f] "
-              >
+            <div className="max-w-[1440px] flex justify-between items-end mb-10">
+              <h2 className="text-[48px] font-semibold text-[#1d1d1f] leading-tight ">
                 Why Apple is the best
                 <br />
                 place to buy Mac.
@@ -564,7 +566,7 @@ function Mac() {
             {/* Cards */}
             <div
               ref={scrollRef}
-              className="flex gap-4 overflow-x-auto pl-[calc((100vw-1322px)/2)] pr-10 scroll-smooth no-scrollbar "
+              className="flex gap-4 overflow-x-auto  pr-10 scroll-smooth no-scrollbar "
             >
               {products.map((item, index) => (
                 <div
@@ -650,14 +652,99 @@ function Mac() {
                 </div>
               ))}
             </div>
+          </section>
 
+          <section className="bg-[#f5f5f7] w-full bg-white">
+            {/* Header */}
+            <div className="max-w-[1440px] flex pt-4 px-32 py-12 ">
+              <h2 className="text-[48px] font-bold text-[#1d1d1f]">
+                Get to Know Mac.
+              </h2>
+            </div>
+
+            {/* Cards */}
+
+            <div
+              ref={scrollRef}
+              className=" px-32
+    flex
+    flex-row
+    gap-4
+    overflow-x-auto
+    no-scrollbar
+    scroll-smooth
+  "
+            >
+              {product.map((product) => (
+                <div
+                  key={product.id}
+                  className="
+        flex-none
+        w-[372px]
+        h-[680px]
+        rounded-[28px]
+        bg-cover
+        bg-center
+        bg-[#f5f5f7]
+        relative
+        overflow-hidden
+      "
+                  style={{
+                    backgroundImage: `url(${product.image})`,
+                    
+                  }}
+                >
+                  {/* Card content */}
+                  <div className="p-7">
+                    <p
+                      className={`
+    text-[14px]
+    font-semibold
+    ${product.textColor}
+  `}
+                    >
+                      {product.titleSmall}
+                    </p>
+
+                    <h3
+                      className={`
+    text-[25px]
+    font-semibold
+    leading-[1.1]
+    leading-tight
+    ${product.textColor}
+  `}
+                    >
+                      {product.title}
+                    </h3>
+                  </div>
+                  {/* Plus button */}
+                  <button
+                    className="
+              absolute
+              bottom-5
+              right-5
+              w-8
+              h-8
+              rounded-full
+              bg-[#e8e8ed]
+              flex
+              items-center
+              justify-center
+              "
+                  >
+                    <Plus size={18} />
+                  </button>
+                </div>
+              ))}
+            </div>
             {/* Arrows */}
             <div
               className="
         max-w-[1322px]
         mx-auto
         flex
-        justify-center
+         items-center justify-center 
         gap-3
         mt-6
       "
@@ -696,88 +783,6 @@ function Mac() {
             </div>
           </section>
 
-          <section className="bg-[#f5f5f7] w-full">
-            {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex pt-4 px-32 py-12">
-              <h2 className="text-[48px] font-bold text-[#1d1d1f]">
-                Get to Know Mac.
-              </h2>
-            </div>
-
-            {/* Cards */}
-
-            <div ref={scrollRef}
-              className=" px-32
-    flex
-    flex-row
-    gap-4
-    overflow-x-auto
-    no-scrollbar
-    scroll-smooth
-  "
-            >
-              {product.map((product) => (
-                <div
-                  key={product.id}
-                  className="
-        flex-none
-        w-[372px]
-        h-[680px]
-        rounded-[28px]
-        bg-cover
-        bg-center
-        relative
-        overflow-hidden
-      "
-                  style={{
-                    backgroundImage: `url(${product.image})`,
-                  }}
-                >
-                  {/* Card content */}
-                  <div className="p-7">
-                    <p
-                      className={`
-    text-[14px]
-    font-semibold
-    ${product.textColor}
-  `}
-                    >
-                      {product.titleSmall}
-                    </p>
-
-                    <h3
-                      className={`
-    text-[25px]
-    font-semibold
-    leading-[1.1]
-    ${product.textColor}
-  `}
-                    >
-                      {product.title}
-                    </h3>
-                  </div>
-                  {/* Plus button */}
-                  <button
-                    className="
-              absolute
-              bottom-5
-              right-5
-              w-8
-              h-8
-              rounded-full
-              bg-[#e8e8ed]
-              flex
-              items-center
-              justify-center
-              "
-                  >
-                    <Plus size={18} />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* BigCard 1 */}
           <div className="h-auto bg-[#f5f5f7] pt-12   px-32">
             <p className="text-[#1d1d1f] text-[48px] font-semibold ">
@@ -796,7 +801,7 @@ function Mac() {
               Mac Essentials.
             </p>
             <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
-              {bigCards.map((card) => (
+              {bigCard.map((card) => (
                 <BigCard className="" key={card.id} {...card} />
               ))}
             </div>
@@ -817,10 +822,10 @@ function Mac() {
 
               {/* Card */}
 
-              <div className="rounded-[34px] bg-[#f5f5f7] h-[640px] flex overflow-hidden">
+              <div className="rounded-[30px] bg-[#f5f5f7] h-[640px] flex overflow-hidden">
                 {/* Left */}
 
-                <div className="w-[38%] px-14 py-14 flex flex-col justify-center">
+                <div className="w-[38%] px-14  flex flex-col justify-center">
                   {appleFeatures.map((item, index) => (
                     <div
                       key={item.id}
@@ -871,6 +876,7 @@ function Mac() {
           </section>
         </main>
       </div>
+      <Footer/>
     </div>
   );
 }

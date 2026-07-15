@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import BigProductCard from "../components/BigProductCard";
 import SmallProductCard from "../components/SmallProductCard";
 import Footer from "../components/Footer";
+import ProductCard1 from "../components/ProductCard1.jsx"
 import { useRef } from "react";
 
 import { FreeMode } from "swiper/modules";
@@ -154,98 +155,49 @@ const products = [
 
 const products1 = [
   {
-    badge: "",
-    title: "iPhone 16 Pro",
-    description: "Hello, Apple Intelligence.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/.jpeg",
-    textColor: "text-white",
+    badge: "CARRIER DEAL AT APPLE",
+    title: "Get UP to $800-$1100 in credit on a new iPhone after trade in.",
+    description: "Explore deals that accept eligibles trade-in devices in any condition.",
+    price: "",
+    image: "/images/Store/iphone-card-40-carriertrade-202409_FMT_WHH.jpeg",
+    textColor: "text-[#1d1d1f]",
   },
   {
-    badge: "New",
-    title: "MacBook Neo",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-macbook-neo-202603_FMT_WHH.jpeg",
+    badge: "Education",
+    title: "Save On a new Mac, iPdad, and Apple Watch with Education pricing.",
+    description: "",
+    price: "",
+    image: "/images/Store/store-card-40-education-202605_FMT_WHH.jpeg",
   },
   {
-    badge: "",
-    title: "iPhone 17e",
-    description: "Feature stacked. Value packed.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-iphone-17e-202603_FMT_WHH.jpeg",
+    badge: "CERTIFIED REBURISHED",
+    title: "Shop reburished Apple product backend by one year warranty.",
+    description: "",
+    price: "",
+    image: "/images/Store/store-card-40-refurb-202408_FMT_WHH.jpeg",
   },
   {
-    badge: "FREE ENGRAVING",
-    title: "AirPods Max 2",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-airpods-max-202409_GEO_US_FMT_WHH.jpeg",
+    badge: "SMALL BUSSINESS",
+    title: "Simple solution for all the ways you work.",
+    description: "",
+    price: "",
+    image: "/images/Store/store-card-40-business-202506_FMT_WHH.jpeg",
+     textColor: "text-white",
   },
   {
-    badge: "",
-    title: "MacBook Air",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-macbook-pro-202510.jpeg",
-    textColor: "text-white",
+    badge: "GOVERNMENT",
+    title: "Special pricing is available for state, local, and federal agencies.",
+    description: "",
+    price: "",
+    image: "/images/Store/store-card-40-gov-202503_FMT_WHH.jpeg",
+     textColor: "text-[#1d1d1f]",
   },
   {
-    badge: "",
+    badge: "VETERANS AND MILITARY",
     title: "MacBook Pro",
     description: "Supercharged by M4.",
     price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-macbook-air-202603_FMT_WHH.jpeg",
-  },
-  {
-    badge: "",
-    title: "iPad Air",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.9",
-    image: "/images/Store/store-card-40-ipad-air-202603_FMT_WHH.jpeg",
-  },
-  {
-    badge: "",
-    title: "Apple Watch Series 11",
-    description: "The ultimate way to watch your health.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-watch-s11-202509_FMT_WHH.jpeg",
-  },
-  {
-    badge: "",
-    title: "iPhone",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-iphone-17-202509_FMT_WHH.jpeg",
-  },
-  {
-    badge: "",
-    title: "iPhone",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-iphone-air-202509_FMT_WHH.jpeg",
-  },
-  {
-    badge: "",
-    title: "Studio Display",
-    description: "A sight to be bold.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-studio-display-202603_FMT_WHH.jpeg",
-  },
-  {
-    badge: "",
-    title: "Studio Display XDR",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-pro-display-202603_FMT_WHH.jpeg",
-    textColor: "text-white",
-  },
-  {
-    badge: "",
-    title: "Apple Watch SE 3",
-    description: "Supercharged by M4.",
-    price: "From $399 0r $33.25/mo.",
-    image: "/images/Store/store-card-40-watch-se-202603_FMT_WHH.jpeg",
+    image: "/images/Store/store-card-40-veteran-202509_FMT_WHH.jpeg",
   },
 ];
 // Big ProductCard
@@ -367,8 +319,8 @@ const smallProducts = [
       "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
       "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
+      "/images/Store/homepod-select-white-202210_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
     ],
   },
   {
@@ -382,26 +334,26 @@ const smallProducts = [
       "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
       "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
+      "/images/Store/homepod-select-white-202210_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
     ],
   },
   {
     id: 3,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MGD74.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "MagSafe Charger (1m)",
     price: "$59.00",
     variants: [
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
     ],
   },
   {
     id: 4,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MHWC4.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "iphone 17e clear case with Magsafe",
     price: "$59.00",
     variants: [
      
@@ -409,9 +361,9 @@ const smallProducts = [
   },
   {
     id: 5,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MHYK4ref.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "46mm Clemetine Sport Brand",
     price: "$59.00",
     variants: [
        "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
@@ -424,9 +376,9 @@ const smallProducts = [
   },
   {
     id: 6,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MGYY4.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "Magic Keyboards",
     price: "$59.00",
     variants: [
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
@@ -435,9 +387,9 @@ const smallProducts = [
   },
   {
     id: 7,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MGPG4.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "iPhone Mac Air Safe Battery",
     price: "$59.00",
     variants: [
      
@@ -445,44 +397,44 @@ const smallProducts = [
   },
   {
     id: 8,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MH044.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "iPhone Air Bumper- Tan",
     price: "$59.00",
     variants: [
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
       "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
+     
     ],
   },
   {
     id: 9,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/HSFN2.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "Mobile Check Case For iPhone Air",
     price: "$59.00",
     variants: [
-      
+      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
 
     ],
   },
   {
     id: 10,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/HSFD2.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "Hershel Cloud Sling for iPhone",
     price: "$59.00",
     variants: [
       "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
-      "/images/Store/homepod-mini-select-yellow-202110_SW_COLOR.png",
+      "/images/Store/HSFC2_SW_COLOR.png",
     ],
   },
   {
     id: 11,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MGKN4.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "44W USB-C Adapter",
     price: "$59.00",
     variants: [
       
@@ -490,9 +442,9 @@ const smallProducts = [
   },
   {
     id: 12,
-    image: "/images/Store/MHYX4.jpeg",
+    image: "/images/Store/MWVV3.jpeg",
     badge: "New",
-    title: "Crossbody Strap - Bright Guava",
+    title: "20W USB-C Power Adapter",
     price: "$59.00",
     variants: [
       
@@ -500,18 +452,128 @@ const smallProducts = [
   },
   {
     id: 13,
-    image: "/images/Store/MHYX4.jpeg",
-    badge: "New",
-    title: "Crossbody Strap - Bright Guava",
-    price: "$59.00",
+    image: "/images/Store/store-card-40-all-accessories-202603_FMT_WHH.jpeg",
+    badge: "...",
+    title: "Explore Accessories",
+    price: "",
     variants: [
     ],
   },
 ];
+
+const smallProducts1 = [
+  {
+    id: 1,
+    image: "/images/Store/airpods-max-select-202409-midnight_FMT_WHH.jpeg",
+    badge: "Free Engraving",
+    title: "AirPods Max 2",
+    price: "$549.00",
+    variants: [
+      "/images/Store/airpods-max-select-202409-blue_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-midnight_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-orange_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-purple_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-starlight_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
+    ],
+  },
+  {
+    id: 2,
+    image: "/images/Store/airpods-4-anc-select-202409_FMT_WHH.jpeg",
+    badge: "Free Engraving",
+    title: "AirPods Pro 3",
+    price: "$249.00",
+    variants: [
+      "/images/Store/airpods-max-select-202409-blue_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-midnight_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-orange_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-purple_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-starlight_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
+    ],
+  },
+  {
+    id: 3,
+    image: "/images/Store/airpods-pro-3-hero-select-202509_FMT_WHH.jpeg",
+    badge: "New",
+    title: "MagSafe Charger (1m)",
+    price: "$179.00",
+    variants: [
+      "/images/Store/homepod-mini-select-blue-202110_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
+    ],
+  },
+  {
+    id: 4,
+    image: "/images/Store/MX743.jpeg",
+    badge: "New",
+    title: "Powerbeats Pro 2 — High-Performance Earbuds —",
+    price: "$249.00",
+    variants: [
+     "/images/Store/airpods-max-select-202409-blue_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-midnight_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-orange_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-purple_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-starlight_SW_COLOR.png",
+      "/images/Store/homepod-mini-select-orange-202110_SW_COLOR.png",
+    
+    ],
+  },
+  {
+    id: 5,
+    image: "/images/Store/homepod-select-midnight-202210_FMT_WHH.jpeg",
+    badge: "New",
+    title: "HomePod - Midnight",
+    price: "$349.00",
+    variants: [
+      "/images/Store/airpods-max-select-202409-blue_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-midnight_SW_COLOR.png",
+      
+    ],
+  },
+  {
+    id: 6,
+    image: "/images/Store/homepod-mini-select-orange-202110_FMT_WHH.jpeg",
+    badge: "New",
+    title: "HomePod mini - orange",
+    price: "$129.00",
+    variants: [
+       "/images/Store/airpods-max-select-202409-blue_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-midnight_SW_COLOR.png",
+       "/images/Store/airpods-max-select-202409-blue_SW_COLOR.png",
+      "/images/Store/airpods-max-select-202409-midnight_SW_COLOR.png",
+    ],
+  },
+  {
+    id: 7,
+    image: "/images/Store/MUW33.jpeg",
+    badge: "New",
+    title: "Beats Solo 4 - On-Ear Wireless",
+    price: "$199.99",
+    variants: [
+     "/images/Store/MW463_SW_COLOR.png",
+      "/images/Store/MUW43_SW_COLOR.png",
+      "/images/Store/MWQW3_SW_COLOR.png",
+    ],
+  },
+  {
+    id: 8,
+    image: "/images/Store/MWQW3.jpeg",
+    badge: "New",
+    title: "Beats Pill - Wireless",
+    price: "$149.99",
+    variants: [
+      "/images/Store/MW463_SW_COLOR.png",
+      "/images/Store/MUW43_SW_COLOR.png",
+      "/images/Store/MWQW3_SW_COLOR.png",
+     
+    ],
+  },
+ 
+];
+
 const Store = () => {
-  // Scroller BigProducts
-  // const bigProductRef1 = useRef(null);
-  // const bigProductRef2 = useRef(null);
+  
 
   return (
     <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2">
@@ -654,7 +716,7 @@ const Store = () => {
             {/* Cards */}
             <div className="flex gap-5 w-max pb-4">
               {/* Card 1 */}
-              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col">
+              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <img
                   src="/images/Store/desktop_icon.png"
                   className="w-9 h-9 mb-5"
@@ -671,7 +733,7 @@ const Store = () => {
               </div>
 
               {/* Card 2 */}
-              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col">
+              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <img
                   src="/images/Store/creditcard_icon.png"
                   className="w-9 h-9 mb-5"
@@ -685,7 +747,7 @@ const Store = () => {
               </div>
 
               {/* Card 3 */}
-              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col">
+              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <img
                   src="/images/Store/add_reaction.png"
                   className="w-9 h-9 mb-5"
@@ -701,7 +763,7 @@ const Store = () => {
 
               {/* Card 4 */}
 
-              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col">
+              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <img
                   src="/images/Store/local_shipping.png"
                   className="w-9 h-9 mb-5"
@@ -720,7 +782,7 @@ const Store = () => {
               </div>
               {/* Card 5 */}
 
-              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col">
+              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <img
                   src="/images/Store/desktop_icon.png"
                   className="w-9 h-9 mb-5"
@@ -736,7 +798,7 @@ const Store = () => {
                 </p>
               </div>
               {/* Card 6 */}
-              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col">
+              <div className="w-[303px] h-[228px] shrink-0 bg-white rounded-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-7 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
                 <img
                   src="/images/Store/enterprise_icon.png"
                   className="w-9 h-9 mb-5"
@@ -784,11 +846,11 @@ const Store = () => {
           <div className="w-full h-[579px]  ">
             <div className="flex gap-2">
               <p className="text-[28px] font-semibold text-[#1d1d1f] pb-10">
-                Accessories.
+                Loud and Clear.
               </p>
               <p className="text-[28px] font-semibold text-[#6e6e73]">
                 {" "}
-                Essentials that pair perfectly with your favorite devices.
+                Unparalleled choices for rich, high-quality sound.
               </p>
             </div>
             <Swiper
@@ -800,7 +862,7 @@ const Store = () => {
                 "--swiper-navigation-color": "#6e6e73",
               }}
             >
-              {smallProducts.map((item) => (
+              {smallProducts1.map((item) => (
                 <SwiperSlide key={item.id} className="!w-[313px]">
                   <SmallProductCard {...item} />
                 </SwiperSlide>
@@ -860,7 +922,7 @@ const Store = () => {
             >
               {products1.map((item) => (
                 <SwiperSlide key={item.title} className="!w-[400px]">
-                  <ProductCard {...item} />
+                  <ProductCard1 {...item} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -880,7 +942,7 @@ const Store = () => {
                     border
                     border-[#1d1d1f]
                     text-[14px]
-                    font-medium
+                    
                     text-[#1d1d1f]
                     whitespace-nowrap
                     transition-all
@@ -900,7 +962,6 @@ const Store = () => {
                     border
                     border-[#1d1d1f]
                     text-[14px]
-                    font-medium
                     text-[#1d1d1f]
                     whitespace-nowrap
                     transition-all
@@ -920,7 +981,6 @@ const Store = () => {
                     border
                     border-[#1d1d1f]
                     text-[14px]
-                    font-medium
                     text-[#1d1d1f]
                     whitespace-nowrap
                     transition-all
@@ -940,7 +1000,7 @@ const Store = () => {
                     border
                     border-[#1d1d1f]
                     text-[14px]
-                    font-medium
+
                     text-[#1d1d1f]
                     whitespace-nowrap
                     transition-all
@@ -960,7 +1020,6 @@ const Store = () => {
                     border
                     border-[#1d1d1f]
                     text-[14px]
-                    font-medium
                     text-[#1d1d1f]
                     whitespace-nowrap
                     transition-all

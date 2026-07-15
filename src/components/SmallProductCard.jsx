@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 // eslint-disable-next-line react/prop-types
 const SmallProductCard = ({ badge, image, title, price, variants = [] }) => {
   return (
-    <div className="w-[313px] h-[500px] bg-white rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 shrink-0 flex flex-col">
+    <div className="w-[313px] h-[500px] bg-white rounded-[20px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] p-6 shrink-0 flex flex-col transition-transform duration-300 ease-out hover:scale-[1.01]">
       {/* Product Image */}
       <div className="flex justify-center items-center h-[270px]">
         <img src={image} alt={title} className="max-h-[220px] object-contain" />

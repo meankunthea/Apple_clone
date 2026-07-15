@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const BigCard = ({ title, description, image, subtitle }) => {
   return (
    
-  <div className="shrink-0 w-[618px] h-[623px] rounded-[20px] overflow-hidden bg-white shadow-lg">
+  <div className="shrink-0 w-[618px] h-[623px] rounded-[20px] overflow-hidden bg-white shadow-lg transition-transform duration-300 ease-out hover:scale-[1.01]">
     <div className="p-6 text-center">
       <h3 className="text-[28px] font-semibold text-[#1d1d1f] whitespace-pre-line">
         {title}

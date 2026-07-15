@@ -1,48 +1,82 @@
 import PropTypes from "prop-types";
 
-const BigProductCard = ({
+const BigCard = ({
   title,
   description,
+  subtitle,
   image,
-  badge,
 }) => {
   return (
-    <div className="shrink-0 w-[480px] h-[500px] rounded-[20px] overflow-hidden shadow-lg">
-      <div
-        className="relative w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${image})` }}
-      >
-        {badge && (
-          <span className="absolute left-6 top-5 text-[14px]  text-[#424245] z-10">
-            {badge}
-          </span>
-        )}
+    <div
+      className="
+        shrink-0
+        w-[618px]
+        h-[623px]
+        rounded-[28px]
+        overflow-hidden
+        bg-white
+        shadow-lg
+      "
+    >
+      {/* Text Section */}
+      <div className="h-[280px] px-8 pt-8 text-center">
+        <h2
+          className="
+            text-[#1d1d1f]
+            text-[28px]
+            font-semibold
+            leading-tight
+            whitespace-pre-line
+          "
+        >
+          {title}
+        </h2>
 
-        <div className="absolute inset-0  px-6 py-6 ">
-          <div className="pt-8 space-y-1">
-            <h3 className="text-[28px] text-[#1d1d1f] font-semibold">
-              {title}
-            </h3>
+        <p
+          className="
+            mt-4
+            text-[#6e6e73]
+            text-[17px]
+            leading-relaxed
+          "
+        >
+          {description}
+        </p>
 
-            <p className="text-[14px] ">
-              {description}
-            </p>
-          </div>
-        </div>
+        <p
+          className="
+            mt-4
+            text-[#0066cc]
+            text-[17px]
+            
+          "
+        >
+          {subtitle}
+        </p>
       </div>
+
+
+      {/* Image Section */}
+      <div
+        className="
+          h-[343px]
+          bg-cover
+          bg-center
+        "
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
+      />
     </div>
   );
 };
 
-BigProductCard.propTypes = {
+
+BigCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  badge: PropTypes.string,
 };
 
-BigProductCard.defaultProps = {
-  badge: "",
-};
-
-export default BigProductCard;
+export default BigCard;
