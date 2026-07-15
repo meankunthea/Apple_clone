@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
   return (
     <>
@@ -17,7 +18,7 @@ const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <div className="h-[432px] max-w-full mx-auto bg-white px-6 py-8">
+        <div className="h-[530px] max-w-full mx-auto bg-white px-6 py-8">
           <div className="grid-cols-[280px_1fr_1fr_1fr] gap-32 text-sm text-[#1d1d1f] mx-auto flex h-full max-w-full items-start justify-center px-24 py-8">
             <div className="space-y-2">
               <p className="text-[12px] text-[#6e6e73]">Explore Mac</p>
@@ -26,72 +27,79 @@ const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
                 className="block text-[24px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Explore All iPad
+                Explore All Mac
               </Link>
               <Link
                 to="/mac"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad Pro
+                MacBook Neo
               </Link>
               <Link
                 to="/mac"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad Air
+                MacBook Air
               </Link>
               <Link
                 to="/mac"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad
+                MacBook Pro
               </Link>
               <Link
                 to="/mac"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad mini
+                iMac
               </Link>
               <Link
                 to="/mac"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                Apple Pencil
+                Mac mini
               </Link>
               <Link
                 to="/mac"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                Keyboards
+                Mac Studio
+              </Link>
+               <Link
+                to="/mac"
+                className="block text-[24px] text-[#333336] font-semibold hover:text-black"
+                onClick={onItemClick}
+              >
+                Displays
               </Link>
               <p className="text-[12px] text-[#333336] font-semibold mt-4">
-                
+                Comapare Mac
               </p>
               <p className="text-[12px] text-[#333336] font-semibold">
-                Compare iPad
+                Switch from PC to Mac
               </p>
             </div>
             <div className="space-y-2">
-              <p className="text-[12px] text-[#6e6e73]">Shop iPad</p>
+              <p className="text-[12px] text-[#6e6e73]">Shop Mac</p>
               <Link
                 to="/mac"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Shop iPad
+                Shop Mac
               </Link>
               <Link
                 to="/mac"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iPad Accessories
+                Mac Accessories
               </Link>
               <Link
                 to="/mac"
@@ -99,13 +107,6 @@ const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
                 onClick={onItemClick}
               >
                 Apple Trade In
-              </Link>
-              <Link
-                to="/mac"
-                className="block text-[12px] text-[#333336] font-semibold"
-                onClick={onItemClick}
-              >
-                Carrier Deals at Apple
               </Link>
               <Link
                 to="/mac"
@@ -121,15 +122,16 @@ const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
               >
                 Personal Setup
               </Link>
+              
             </div>
             <div className="space-y-2">
-              <p className="text-[12px] text-[#6e6e73]">More from iPad</p>
+              <p className="text-[12px] text-[#6e6e73]">More from Mac</p>
               <Link
                 to="/mac"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iPad Support
+                Mac Support
               </Link>
               <Link
                 to="/mac"
@@ -157,14 +159,21 @@ const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iPad Privacy
+                Apps by Apple
               </Link>
               <Link
                 to="/mac"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Better with Mac
+                Apple Creator Studio
+              </Link>
+               <Link
+                to="/mac"
+                className="block text-[12px] text-[#333336] font-semibold"
+                onClick={onItemClick}
+              >
+                Better with iPhone
               </Link>
               <Link
                 to="/mac"
@@ -178,7 +187,14 @@ const MacDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Wallet, Pay, Card
+                Mac for Bussiness
+              </Link>
+              <Link
+                to="/mac"
+                className="block text-[12px] text-[#333336] font-semibold"
+                onClick={onItemClick}
+              >
+                Education
               </Link>
             </div>
           </div>

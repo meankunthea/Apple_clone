@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const StoreDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
   return (
     <>
@@ -20,78 +21,79 @@ const StoreDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
         <div className="h-[432px] max-w-full mx-auto bg-white px-6 py-8">
           <div className="grid-cols-[280px_1fr_1fr_1fr] gap-32 text-sm text-[#1d1d1f] mx-auto flex h-full max-w-full items-start justify-center px-24 py-8">
             <div className="space-y-2">
-              <p className="text-[12px] text-[#6e6e73]">Explore iPad</p>
+              <p className="text-[12px] text-[#6e6e73]">Shop</p>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Explore All iPad
+                Shop the latest
               </Link>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad Pro
+                Mac
               </Link>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad Air
+                iPad 
               </Link>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad
+                iPhone
               </Link>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                iPad mini
+                Apple Watch
               </Link>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                Apple Pencil
+                Apple Vision Pro
               </Link>
               <Link
                 to="/store"
                 className="block text-[24px] text-[#333336] font-semibold hover:text-black"
                 onClick={onItemClick}
               >
-                Keyboards
+                AirPods
               </Link>
-              <p className="text-[12px] text-[#333336] font-semibold mt-4">
-                
-              </p>
-              <p className="text-[12px] text-[#333336] font-semibold">
-                Compare iPad
-              </p>
+              <Link
+                to="/store"
+                className="block text-[24px] text-[#333336] font-semibold hover:text-black"
+                onClick={onItemClick}
+              >
+                Accessories
+              </Link>
             </div>
             <div className="space-y-2">
-              <p className="text-[12px] text-[#6e6e73]">Shop iPad</p>
+              <p className="text-[12px] text-[#6e6e73]">Quick Links</p>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Shop iPad
+                Find a Store
               </Link>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iPad Accessories
+                Order Status
               </Link>
               <Link
                 to="/store"
@@ -105,7 +107,7 @@ const StoreDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Carrier Deals at Apple
+                Financing
               </Link>
               <Link
                 to="/store"
@@ -123,62 +125,41 @@ const StoreDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
               </Link>
             </div>
             <div className="space-y-2">
-              <p className="text-[12px] text-[#6e6e73]">More from iPad</p>
+              <p className="text-[12px] text-[#6e6e73]">Shop Special Stores</p>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iPad Support
+                Certified Fefurbished
               </Link>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                AppleCare
+                Education
               </Link>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iOS Preview 27
+                Bussiness
               </Link>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                Apple Intelligence and Siri
+                Veterans and Military
               </Link>
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"
                 onClick={onItemClick}
               >
-                iPad Privacy
-              </Link>
-              <Link
-                to="/store"
-                className="block text-[12px] text-[#333336] font-semibold"
-                onClick={onItemClick}
-              >
-                Better with Mac
-              </Link>
-              <Link
-                to="/store"
-                className="block text-[12px] text-[#333336] font-semibold"
-                onClick={onItemClick}
-              >
-                iCloud+
-              </Link>
-              <Link
-                to="/store"
-                className="block text-[12px] text-[#333336] font-semibold"
-                onClick={onItemClick}
-              >
-                Wallet, Pay, Card
+                Government
               </Link>
             </div>
           </div>

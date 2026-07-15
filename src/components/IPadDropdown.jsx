@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 const IPadDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
   return (
     <>
@@ -100,13 +101,7 @@ const IPadDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
               >
                 Apple Trade In
               </Link>
-              <Link
-                to="/ipad"
-                className="block text-[12px] text-[#333336] font-semibold"
-                onClick={onItemClick}
-              >
-                Carrier Deals at Apple
-              </Link>
+             
               <Link
                 to="/ipad"
                 className="block text-[12px] text-[#333336] font-semibold"
