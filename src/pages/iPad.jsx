@@ -4,47 +4,43 @@ import { useNavigate } from "react-router-dom";
 
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
 import BigCard from "../components/BigProductCard";
+import Footer from "../components/Footer"
 
 const categories = [
-  { name: "iPad Pro", image: "/images/iPad/education_bdd3e67fa_2x.jpg" },
+  { name: "iPad Pro", image: "/images/iPad/ipad_pro_bd732ab83_2x.png" },
   {
     name: "iPad Air",
-    image: "/images/Mac/mba_13_15_7482a7376_2x.jpg",
+    image: "/images/iPad/ipad_air_1ebbfa37b_2x.png",
   },
-  { name: "iPad", image: "/images/Mac/mbp_14_16_304f8e722_2x.jpg" },
+  { name: "iPad", image: "/images/iPad/ipad_473e5c831_2x.png" },
   {
-    name: "iPad mini",
-    image: "/images/Mac/nav_imac_24_fbf85926c_2x.png",
+    name: "iPad mini ",
+    image: "/images/iPad/ipad_mini_f62883aa9_2x.png",
   },
   {
     name: "Compare",
-    image: "/images/Mac/mac_mini_0688a3785_2x.jpg",
+    image: "/images/iPad/compare_51cfd77c0_2x.png",
   },
   {
     name: "Apple Pencil",
-    image: "/images/Mac/mac_studio_3170621a5_2x.jpg",
+    image: "/images/iPad/apple_pencil_78eb83b97_2x.png",
   },
   {
     name: "Keyboards",
-    image: "/images/Mac/nav_compare_5c5c25766_2x.png",
-  },
-  {
-    name: "Covers & Cases",
-    image: "/images/Mac/nav_displays_e08c5b904_2x.png",
+    image: "/images/iPad/keyboards_f5cef0366_2x.png",
   },
   {
     name: "Accessories",
-    image: "/images/Mac/nav_accessories_c3e74ad3c_2x.png",
+    image: "/images/iPad/accessories_bf015339a_2x.png",
   },
   {
     name: "iPadOS 27",
-    image: "/images/Mac/nav_shop_mac_180ba8818_2x.png",
+    image: "/images/iPad/ipados_588cf979c_2x.png",
   },
   {
     name: "Shop iPad",
-    image: "/images/Mac/nav_macos_eba0c550e_2x.png",
-  }
-  
+    image: "/images/iPad/shop_ipad_04978bb75_2x.png",
+  },
 ];
 
 // Explore lineup products
@@ -53,9 +49,10 @@ const lineupProducts = [
     id: 1,
     slug: "ipad-pro",
     category: "iPad Pro",
-    image: "/images/Mac/mbn_0cd16ed14_2x (1).jpg",
+    image: "/images/iPad/ipad_pro_4728732b6_2x.png",
     name: "iPad Pro",
-    description: "The ultimate iPad experience with the most advanced technology.",
+    description:
+      "The ultimate iPad experience with the most advanced technology.",
     price: "From $699 or $58.25/mo.",
     colors: [
       "/images/Mac/color1.png",
@@ -69,7 +66,7 @@ const lineupProducts = [
     id: 2,
     slug: "ipad-air",
     category: "Laptops",
-    image: "/images/Mac/mba_13_15_7482a7376_2x.jpg",
+    image: "/images/iPad/ipad_air_fc8e6de30_2x.png",
     name: "iPad Air",
     description: "Serious performance in a thin and light design.",
     price: "From $699 or $58.25/mo.",
@@ -86,9 +83,10 @@ const lineupProducts = [
     id: 3,
     slug: "ipad",
     category: "Laptops",
-    image: "/images/Mac/mbp_14_16_304f8e722_2x.jpg",
+    image: "/images/iPad/ipad_mini_7a6b96b66_2x.png",
     name: "iPad",
-    description: "The colorful, all‑screen iPad for the things you do every day.",
+    description:
+      "The colorful, all‑screen iPad for the things you do every day.",
     price: "From $699 or $58.25/mo.",
     colors: [
       "/images/Mac/color1.png",
@@ -103,7 +101,7 @@ const lineupProducts = [
     id: 4,
     slug: "ipad-mini",
     category: "Desktops",
-    image: "/images/Mac/imac_24_9168aa3d6_2x.jpg",
+    image: "/images/iPad/ipad_b5ff17629_2x.png",
     name: "iPad mini",
     description: "he full iPad experience in an ultraportable design.",
     price: "From $699 or $58.25/mo.",
@@ -114,7 +112,7 @@ const lineupProducts = [
       "/images/Mac/color4.png",
       "/images/Mac/color5.png",
     ],
-  }
+  },
 ];
 
 //Products
@@ -127,93 +125,99 @@ const products = [
     image: "/images/Mac/apple_card_3230c808c_2x.jpg",
   },
   {
-    titleSmall: "Education",
+    titleSmall: "Apple Trade In",
     title: "Save on Mac with\neducation pricing.*",
     desc: "College students and educators can save through the Apple Store.",
-    image: "/images/Mac/education_9d319824e_2x.jpg",
+    image: "/images/iPad/trade_in_4f412e91d_2x.jpg",
   },
   {
-    titleSmall: "Personal Setup",
+    titleSmall: "Education",
     title: "Meet your new Mac with\nPersonal Setup.",
     desc: "Get one-on-one help with data transfer, the latest features, and more.",
-    image: "/images/Mac/setup_032f3b488_2x.jpg",
+    image: "/images/iPad/education_0f3061d4d_2x.jpg",
   },
   {
     titleSmall: "Customize Your Mac",
     title: "Customize your Mac.",
     desc: "Choose your chip, memory, storage, even color.",
-    image: "/images/Mac/customize_55ea537ad_2x.jpg",
+    image: "/images/iPad/setup_55d11fe77_2x.jpg",
   },
   {
     titleSmall: "Delivery & Pickup",
     title: "Delivery & Pickup",
     desc: "Choose your chip, memory, storage, even color.",
-    image: "/images/Mac/delivery_985fbbc2e_2x.jpg",
+    image: "/images/iPad/deliver_9b8c5d64c_2x.jpg",
+  },
+  {
+    titleSmall: "Engraving",
+    title: "Get flexible delivery and\neasy pickup.",
+    desc: "Choose from two-hour delivery from an Apple Store, free delivery, or easy pickup options.",
+    image: "/images/iPad/customize_db0427324_2x.jpg",
   },
   {
     titleSmall: "Guided Shopping",
     title: "Get flexible delivery and\neasy pickup.",
     desc: "Choose from two-hour delivery from an Apple Store, free delivery, or easy pickup options.",
-    image: "/images/Mac/support_a6134bd81_2x.jpg",
+    image: "/images/iPad/customize_db0427324_2x.jpg",
+  },
+
+  {
+    titleSmall: "Apple Store App",
+    title: "Get flexible delivery and\neasy pickup.",
+    desc: "Choose from two-hour delivery from an Apple Store, free delivery, or easy pickup options.",
+    image: "/images/iPad/customize_db0427324_2x.jpg",
   },
 ];
 
 const product = [
   {
     id: 1,
-    titleSmall: "Performance and Battery Life",
-    title: "Go Fast, Go Far.",
-    image: "/images/Mac/fc_performance_0f92b741a_2x.jpg",
+    titleSmall: "ApodOS + Apps",
+    title: "Flexible windowing. A multitasker's delight.",
+    image: "/images/iPad/fc_ipados_289b3f886_2x.jpg",
     textColor: "text-white",
   },
   {
     id: 2,
-    titleSmall: "Built For AI",
-    title: "Smart. Secure.\nOn Device.",
-    image: "/images/Mac/fc_intelligence_69d4bf8c2_2x.jpg",
+    titleSmall: "Apple Intelligence",
+    title: "Effortlessly helpful every day.",
+    image: "/images/iPad/fc_apple_intelligence_f8c73bc96_2x.jpg",
     textColor: "text-white",
   },
   {
     id: 3,
-    titleSmall: "macOS and Apple Intelligence",
+    titleSmall: "Productivity",
     title: "Easy to use. Easy to love.",
-    image: "/images/Mac/fc_macos_65fcfdaf2_2x.jpg",
-    textColor: "text-[#1d1d1f]",
+    image: "/images/iPad/fc_productivity_aaa953610_2x.jpg",
+    textColor: "text-white",
   },
   {
     id: 4,
-    titleSmall: "Mac + iPhone",
+    titleSmall: "Creativity",
     title: "Together they \nwork wonders.",
-    image: "/images/Mac/fc_iphone_1a4c9f1e5_2x  .jpg",
-    textColor: "text-[#1d1d1f]",
+    image: "/images/iPad/fc_creativity_02762ec5f_2x.jpg",
+    textColor: "text-white",
   },
   {
     id: 5,
-    titleSmall: "Compatibility",
+    titleSmall: "Learning",
     title: "Mac runs your\n favorite apps.",
     desc: "Choose your chip, memory, storage, even color.",
-    image: "/images/Mac/fc_compatibility_e94c0f8a8_2x.jpg",
-    textColor: "text-[#1d1d1f]",
+    image: "/images/iPad/fc_learning_04156319d_2x.jpg",
+    textColor: "text-white",
   },
   {
     id: 6,
-    titleSmall: "Privacy and Security",
+    titleSmall: "Entertainment",
     title: "Get flexible delivery and\neasy pickup.",
-    image: "/images/Mac/fc_security_4edf4d348_2x.jpg",
+    image: "/images/iPad/fc_entertainment_61254e461_2x.jpg",
     textColor: "text-white",
   },
   {
     id: 7,
-    titleSmall: "Privacy and Security",
+    titleSmall: "Apple Pencil",
     title: "Get flexible delivery and\neasy pickup.",
-    image: "/images/Mac/fc_durability_44004299a_2x.jpg",
-    textColor: "text-white",
-  },
-  {
-    id: 8,
-    titleSmall: "Privacy and Security",
-    title: "Get flexible delivery and\neasy pickup.",
-    image: "/images/Mac/fc_values_e5b10a05a_2x.jpg",
+    image: "/images/iPad/fc_pencil_60e914513_2x.jpg",
     textColor: "text-white",
   },
 ];
@@ -222,17 +226,17 @@ const product = [
 const bigCards = [
   {
     id: 1,
-    title: "Give us the old. Save on\nthe new",
+    title: "Apple Pencil",
     description:
-      "with Apple trade in, you can get a great value for\nyou current device and apply it toward a new one.\nIf youyr device isn't eligible for credit, we'll recycle it   for free.",
-    image: "/images/Mac/trade_in_f0404b799_2x.png",
-    subtitle: "See What your device is worth >",
+      "Dream it up. Jot it down.",
+    image: "/images/iPad/pencil_afee11a20_2x.png",
+    subtitle: "Learn more >",
   },
   {
     id: 2,
-    title: "Give us the old. Save on\nthe new",
-    description: "Show how easy it move to Mac.",
-    image: "/images/Mac/mac_does_that_118f02192_2x.png",
+    title: "Keyboards for iPad.",
+    description: "Type it out. Take it with you.",
+    image: "/images/iPad/keyboard_d02dc03ac_2x.png",
     subtitle: "Learn more >",
   },
 ];
@@ -242,22 +246,22 @@ const appleFeatures = [
     id: 1,
     title: "iPad and iPhone",
     description:
-      "Answer calls or messages from your iPhone directly on your Mac. See and control what's on your iPhone from your Mac with iPhone Mirroring and Live Activities. Use Universal Clipboard to copy images, video, or text from your iPhone, then paste into another app on your nearby Mac.",
-    image: "/images/Mac/mac_iphone_d50c6f239_2x.jpg",
+      "iPad is perfect for taking the content you capture on iPhone and bringing it to life on an immersive canvas. You can shoot videos and photos on your iPhone and use the large display of your iPad to edit, add animations, and more. You can also pick up wherever you left off with Handoff.",
+    image: "/images/iPad/ipad_iphone_632147d37_2x.jpg",
   },
   {
     id: 2,
     title: "iPad and Mac",
     description:
-      "Sketch on your iPad and instantly see it appear on your Mac with Sidecar. Use Universal Control to move your keyboard and mouse between devices seamlessly.",
-    image: "/images/Mac/mac_ipad_e3dad78c7_2x.jpg",
+      "iPad and Mac are designed to work together to form the ultimate creative setup. Sketch on your iPad and have it appear instantly on your Mac with Sidecar. Then use your iPad for drawing or editing with Apple Pencil or as a second display. Extend your workflow to new places, and when you return to your desk, Universal Control allows you to use one mouse or trackpad seamlessly across both devices.",
+    image: "/images/iPad/ipad_mac_97f267217_2x.jpg",
   },
   {
     id: 3,
     title: "iPad and Apple Watch",
     description:
-      "Unlock your iPad automatically with Apple Watch. Approve passwords and payments instantly and enjoy seamless continuity across your devices.",
-    image: "/images/Mac/mac_watch_0075a526e_2x.jpg",
+      "Unlock your iPad automaticallyiPad is a great way to optimize your workouts while tracking your progress on Apple Watch. See personal metrics from Apple Watch integrated on the screen of your iPad in real time. The sensors in Apple Watch combine with advanced algorithms to provide data that keeps you motivated. And see it all come together in the Health app on iPad. with Apple Watch. Approve passwords and payments instantly and enjoy seamless continuity across your devices.",
+    image: "/images/iPad/ipad_watch_8e111cb6e_2x.jpg",
   },
 ];
 function iPad() {
@@ -376,43 +380,16 @@ function iPad() {
           </div>
 
           <div className="w-full bg-[#f5f5f7] px-32">
-            <h2 className="text-[48px] font-semibold text-[#1d1d1f] mb-10">
+            <h2 className="text-[48px] font-semibold text-[#1d1d1f] ">
               Explore the lineup.
             </h2>
 
             {/* Tabs */}
 
-            <div className="inline-flex bg-[#e8e8ed] rounded-full p-1">
-              {["All products", "Laptops", "Desktops", "Displays"].map(
-                (tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`px-6 py-3 rounded-full text-[16px] transition
-        ${activeTab === tab ? "bg-[#1d1d1f] text-white" : "text-[#555]"}`}
-                  >
-                    {tab}
-                  </button>
-                ),
-              )}
-            </div>
+           
 
             {/* Products */}
-            <div className="mb-6 flex justify-end gap-3">
-              <button
-                onClick={scrollExploreLeft}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
-              >
-                <ChevronLeft />
-              </button>
-
-              <button
-                onClick={scrollExploreRight}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
-              >
-                <ChevronRight />
-              </button>
-            </div>
+            
             <div
               ref={lineupRef}
               className="flex w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -456,7 +433,7 @@ function iPad() {
                   </p>
 
                   <div className="flex justify-center gap-8 mt-8">
-                    <button 
+                    <button
                       onClick={() => navigate(`/product/${item.slug}`)}
                       className="bg-[#0071e3] text-white px-8 py-3 rounded-full"
                     >
@@ -468,15 +445,28 @@ function iPad() {
                 </div>
               ))}
             </div>
+            <div className="mb-6 flex justify-center gap-3 pt-10">
+              <button
+                onClick={scrollExploreLeft}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronLeft />
+              </button>
+
+              <button
+                onClick={scrollExploreRight}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronRight />
+              </button>
+            </div>
           </div>
 
           {/* Products */}
           <section className="bg-[#f5f5f7] w-full px-32">
             {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex justify-between items-end mb-10">
-              <h2
-                className="text-[48px] font-bold text-[#1d1d1f] "
-              >
+            <div className="max-w-[1440px] flex justify-between items-end mb-10 pt-10">
+              <h2 className="text-[48px] font-bold text-[#1d1d1f] leading-tight">
                 Why Apple is the best
                 <br />
                 place to buy iPad.
@@ -498,7 +488,7 @@ function iPad() {
             {/* Cards */}
             <div
               ref={scrollRef}
-              className="flex gap-4 overflow-x-auto pl-[calc((100vw-1322px)/2)] pr-10 scroll-smooth no-scrollbar "
+              className="flex gap-4 overflow-x-auto pr-10 scroll-smooth no-scrollbar "
             >
               {products.map((item, index) => (
                 <div
@@ -584,55 +574,11 @@ function iPad() {
                 </div>
               ))}
             </div>
-
-            {/* Arrows */}
-            <div
-              className="
-        max-w-[1322px]
-        mx-auto
-        flex
-        justify-center
-        gap-3
-        mt-6
-      "
-            >
-              <button
-                onClick={() => scroll("left")}
-                className="
-          w-9
-          h-9
-          rounded-full
-          bg-[#e8e8ed]
-          flex
-          items-center
-          justify-center
-          text-[#86868b]
-          "
-              >
-                <ChevronLeft size={18} />
-              </button>
-
-              <button
-                onClick={() => scroll("right")}
-                className="
-          w-9
-          h-9
-          rounded-full
-          bg-[#e8e8ed]
-          flex
-          items-center
-          justify-center
-          text-[#1d1d1f]
-          "
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
           </section>
 
-          <section className="bg-[#f5f5f7] w-full">
+          <section className="bg-white w-full">
             {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex pt-4 px-32 py-12">
+            <div className="max-w-[1440px] flex  px-32 py-12">
               <h2 className="text-[48px] font-bold text-[#1d1d1f]">
                 Get to Know iPad.
               </h2>
@@ -640,7 +586,8 @@ function iPad() {
 
             {/* Cards */}
 
-            <div ref={scrollRef}
+            <div
+              ref={scrollRef}
               className=" px-32
     flex
     flex-row
@@ -710,19 +657,72 @@ function iPad() {
                 </div>
               ))}
             </div>
+            {/* Arrows */}
+            <div
+              className="
+        max-w-[1322px]
+        mx-auto
+        flex
+        justify-center
+        gap-3
+        mt-6
+      "
+            >
+              <button
+                onClick={() => scroll("left")}
+                className="
+          w-9
+          h-9
+          rounded-full
+          bg-[#e8e8ed]
+          flex
+          items-center
+          justify-center
+          text-[#86868b]
+          "
+              >
+                <ChevronLeft size={18} />
+              </button>
+
+              <button
+                onClick={() => scroll("right")}
+                className="
+          w-9
+          h-9
+          rounded-full
+          bg-[#e8e8ed]
+          flex
+          items-center
+          justify-center
+          text-[#1d1d1f]
+          "
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
           </section>
 
-          
+          {/* BigCard 1*/}
+          <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
+            <p className="text-[#1d1d1f] text-[48px] font-semibold ">
+              iPad Essentials.
+            </p>
+            <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
+              {bigCards.map((card) => (
+                <BigCard className="" key={card.id} {...card} />
+              ))}
+            </div>
+          </div>
           <section className="bg-white py-24">
             {/* Header */}
 
             <div className="max-w-auto px-32">
               <div className="flex justify-between items-center">
-                <h2 className="text-[48px] font-semibold text-[#1d1d1f] tracking-[-0.02em]">
+                <h2 className="text-[48px] font-semibold text-[#1d1d1f] tracking-[-0.02em] ">
                   Significant others.
                 </h2>
 
-                <button className="text-[#0066cc] text-[17px] hover:underline">
+                <button className="text-[#0066cc] text-[17px] hover:underline ">
                   Learn how Apple devices work better together →
                 </button>
               </div>
@@ -783,6 +783,7 @@ function iPad() {
           </section>
         </main>
       </div>
+      <Footer/>
     </div>
   );
 }
