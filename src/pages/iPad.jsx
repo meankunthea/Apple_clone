@@ -702,7 +702,7 @@ function iPad() {
             </div>
           </section>
 
-          {/* BigCard 1*/}
+          {/* BigCard */}
           <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
             <p className="text-[#1d1d1f] text-[48px] font-semibold ">
               iPad Essentials.

@@ -6,12 +6,18 @@ import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
 import BigCard from "../components/BigProductCard";
 
 const categories = [
-  { name: "iPhone 17 Pro", image: "/images/iPhone/nav_iphone_17pro__b8rt659h2ogi_large_2x.png" },
+  {
+    name: "iPhone 17 Pro",
+    image: "/images/iPhone/nav_iphone_17pro__b8rt659h2ogi_large_2x.png",
+  },
   {
     name: "iPhone Air",
     image: "/images/iPhone/nav_iphone_air__f066mfdfhi62_large_2x.png",
   },
-  { name: "iPhone 17", image: "/images/iPhone/nav_iphone_17__bx67weh1ur5y_large_2x.png" },
+  {
+    name: "iPhone 17",
+    image: "/images/iPhone/nav_iphone_17__bx67weh1ur5y_large_2x.png",
+  },
   {
     name: "iPhone 17e",
     image: "/images/iPhone/nav_iphone_17__bx67weh1ur5y_large_2x.png",
@@ -35,8 +41,7 @@ const categories = [
   {
     name: "iOS",
     image: "/images/iPhone/nav_os__ctztjfl7myye_large_2x.png",
-  }
-  
+  },
 ];
 
 // Explore lineup products
@@ -122,99 +127,99 @@ const lineupProducts = [
       "/images/Mac/color4.png",
       "/images/Mac/color5.png",
     ],
-  }
+  },
 ];
 
 //Products
 
 const products = [
   {
-    titleSmall: "Ways to Buy",
-    title: "Pay over time,\ninterest-free.",
-    desc: "When you choose to check out with Apple Card Monthly Installments.",
-    image: "/images/Mac/apple_card_3230c808c_2x.jpg",
+    titleSmall: "Apple Trade In",
+    title: "Save on a new iPhone \n with a trade in.",
+    desc: "Get up to $195-$695 in credit card toward \niPhone 17,iPhone Air, or iPhone 17 Pro \n when you trade in iPhone 13 or higher.",
+    image: "/images/iPhone/trade_in__d4dobu5egm0y_large.jpg",
   },
   {
     titleSmall: "Education",
     title: "Save on Mac with\neducation pricing.*",
     desc: "College students and educators can save through the Apple Store.",
-    image: "/images/Mac/education_9d319824e_2x.jpg",
+    image: "/images/iPhone/buy__gdo4oaj4ekmm_large.jpg",
   },
   {
     titleSmall: "Personal Setup",
     title: "Meet your new Mac with\nPersonal Setup.",
     desc: "Get one-on-one help with data transfer, the latest features, and more.",
-    image: "/images/Mac/setup_032f3b488_2x.jpg",
+    image: "/images/iPhone/carrier__dllu07ktiuaa_large.jpg",
   },
   {
     titleSmall: "Customize Your Mac",
     title: "Customize your Mac.",
     desc: "Choose your chip, memory, storage, even color.",
-    image: "/images/Mac/customize_55ea537ad_2x.jpg",
+    image: "/images/iPhone/setup__d177om0fsqs2_large.jpg",
   },
   {
     titleSmall: "Delivery & Pickup",
     title: "Delivery & Pickup",
     desc: "Choose your chip, memory, storage, even color.",
-    image: "/images/Mac/delivery_985fbbc2e_2x.jpg",
+    image: "/images/iPhone/deliver__by32yxmh41ma_large.jpg",
   },
   {
     titleSmall: "Guided Shopping",
     title: "Get flexible delivery and\neasy pickup.",
     desc: "Choose from two-hour delivery from an Apple Store, free delivery, or easy pickup options.",
-    image: "/images/Mac/support_a6134bd81_2x.jpg",
+    image: "/images/iPhone/specialist__bxk6m5pp2k3m_large.jpg",
   },
 ];
 
 const product = [
   {
     id: 1,
-    titleSmall: "Performance and Battery Life",
-    title: "Go Fast, Go Far.",
-    image: "/images/Mac/fc_performance_0f92b741a_2x.jpg",
+    titleSmall: "Innovation",
+    title: "Beautiful and durable, \nby design..",
+    image: "/images/iPhone/innovation__fmir5mp9zpay_large.jpg",
     textColor: "text-white",
   },
   {
     id: 2,
     titleSmall: "Built For AI",
     title: "Smart. Secure.\nOn Device.",
-    image: "/images/Mac/fc_intelligence_69d4bf8c2_2x.jpg",
+    image: "/images/iPhone/camera__dez4cvpw83sm_large.jpg",
     textColor: "text-white",
   },
   {
     id: 3,
-    titleSmall: "macOS and Apple Intelligence",
+    titleSmall: "Chip and Battery Life",
     title: "Easy to use. Easy to love.",
-    image: "/images/Mac/fc_macos_65fcfdaf2_2x.jpg",
-    textColor: "text-[#1d1d1f]",
+    image: "/images/iPhone/chip__fh5j5on49p2e_large.jpg",
+    textColor: "text-white",
   },
   {
     id: 4,
-    titleSmall: "Mac + iPhone",
+    titleSmall: "IOS and Apple Intelligence",
     title: "Together they \nwork wonders.",
-    image: "/images/Mac/fc_iphone_1a4c9f1e5_2x  .jpg",
-    textColor: "text-[#1d1d1f]",
+    image: "/images/iPhone/ios__8z58j1o80yqi_large.jpg",
+    textColor: "text-white",
   },
   {
     id: 5,
-    titleSmall: "Compatibility",
+    titleSmall: "Environment",
     title: "Mac runs your\n favorite apps.",
     desc: "Choose your chip, memory, storage, even color.",
-    image: "/images/Mac/fc_compatibility_e94c0f8a8_2x.jpg",
-    textColor: "text-[#1d1d1f]",
+    image: "/images/iPhone/environment__c8tpot4ti2qa_large.jpg",
+    textColor: "text-white",
   },
   {
     id: 6,
-    titleSmall: "Privacy and Security",
+    titleSmall: "Privacy",
     title: "Get flexible delivery and\neasy pickup.",
-    image: "/images/Mac/fc_security_4edf4d348_2x.jpg",
+    image: "/images/iPhone/privacy__cv4ztv5gebyq_large.jpg",
     textColor: "text-white",
   },
   {
     id: 7,
-    titleSmall: "Privacy and Security",
+    titleSmall: "Peace of Mind",
     title: "Get flexible delivery and\neasy pickup.",
-    image: "/images/Mac/fc_durability_44004299a_2x.jpg",
+    image: "/images/iPhone/safety__grtwyqpan8yi_large.jpg",
     textColor: "text-white",
   },
   {
@@ -230,42 +235,42 @@ const product = [
 const bigCards = [
   {
     id: 1,
-    title: "Give us the old. Save on\nthe new",
+    title: "iPhone Accessories",
     description:
-      "with Apple trade in, you can get a great value for\nyou current device and apply it toward a new one.\nIf youyr device isn't eligible for credit, we'll recycle it   for free.",
-    image: "/images/Mac/trade_in_f0404b799_2x.png",
-    subtitle: "See What your device is worth >",
+      "Protect and personalize your iPhone with fresh\n accessories like colorful cases, the \n Crossbody Strap, and more.",
+    image: "/images/iPhone/accessories__ghgqo4vsxcqe_large.jpg",
+    subtitle: "Shop iPhone Accessories >",
   },
   {
     id: 2,
-    title: "Give us the old. Save on\nthe new",
+    title: "AirTag",
     description: "Show how easy it move to Mac.",
-    image: "/images/Mac/mac_does_that_118f02192_2x.png",
-    subtitle: "Learn more >",
+    image: "/images/iPhone/airtag_accessories__kpd2m3mfy4ia_large.jpg",
+    subtitle: "Buy >",
   },
 ];
 
 const appleFeatures = [
   {
     id: 1,
-    title: "iPad and iPhone",
+    title: "iPhone and Mac",
     description:
       "Answer calls or messages from your iPhone directly on your Mac. See and control what's on your iPhone from your Mac with iPhone Mirroring and Live Activities. Use Universal Clipboard to copy images, video, or text from your iPhone, then paste into another app on your nearby Mac.",
-    image: "/images/Mac/mac_iphone_d50c6f239_2x.jpg",
+    image: "/images/iPhone/mac__e1itm725bz8m_large.jpg",
   },
   {
     id: 2,
-    title: "iPad and Mac",
+    title: "iPhone and Apple Watch",
     description:
       "Sketch on your iPad and instantly see it appear on your Mac with Sidecar. Use Universal Control to move your keyboard and mouse between devices seamlessly.",
-    image: "/images/Mac/mac_ipad_e3dad78c7_2x.jpg",
+    image: "/images/iPhone/watch__co62o3s4jn6u_large.jpg",
   },
   {
     id: 3,
-    title: "iPad and Apple Watch",
+    title: "iPhone and Airpods",
     description:
       "Unlock your iPad automatically with Apple Watch. Approve passwords and payments instantly and enjoy seamless continuity across your devices.",
-    image: "/images/Mac/mac_watch_0075a526e_2x.jpg",
+    image: "/images/iPhone/airpods__bz9s5pwm8j6u_large.jpg",
   },
 ];
 function iPhone() {
@@ -341,7 +346,7 @@ function iPhone() {
             </div>
 
             {/* Category products */}
-            <div className="bg-white px-28 pb-12">
+            <div className="bg-white px-28 pb-12 ">
               {/* Arrows */}
 
               {/* Categories */}
@@ -365,7 +370,7 @@ function iPhone() {
                   </div>
                 ))}
               </div>
-              <div className="relative z-1000 flex justify-end gap-3 mt-4">
+              <div className="relative z-1000 flex justify-center gap-3 mt-4 ">
                 <button
                   onClick={scrollCategoryLeft}
                   className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
@@ -389,30 +394,13 @@ function iPhone() {
             </h2>
 
             {/* Products */}
-            <div className="mb-6 flex justify-end gap-3">
-              <button
-                onClick={scrollExploreLeft}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
-              >
-                <ChevronLeft />
-              </button>
 
-              <button
-                onClick={scrollExploreRight}
-                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
-              >
-                <ChevronRight />
-              </button>
-            </div>
             <div
               ref={lineupRef}
               className="flex w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             >
               {filteredProducts.map((item) => (
-                <div
-                  key={item.id}
-                  className="w-64 flex-shrink-0 text-center"
-                >
+                <div key={item.id} className="w-64 flex-shrink-0 text-center">
                   <div className="h-72 bg-white rounded-[20px] flex items-center justify-center">
                     <img
                       src={item.image}
@@ -447,7 +435,7 @@ function iPhone() {
                   </p>
 
                   <div className="flex justify-center gap-8 mt-8">
-                    <button 
+                    <button
                       onClick={() => navigate(`/product/${item.slug}`)}
                       className="bg-[#0071e3] text-white px-8 py-3 rounded-full"
                     >
@@ -459,6 +447,21 @@ function iPhone() {
                 </div>
               ))}
             </div>
+            <div className="mb-6 flex justify-center pt-10 gap-3">
+              <button
+                onClick={scrollExploreLeft}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronLeft />
+              </button>
+
+              <button
+                onClick={scrollExploreRight}
+                className="w-10 h-10 rounded-full bg-white hover:bg-gray-200 flex items-center justify-center shadow-sm"
+              >
+                <ChevronRight />
+              </button>
+            </div>
           </div>
 
           <div className="w-full bg-[#f5f5f7] px-32">
@@ -469,23 +472,33 @@ function iPhone() {
               ref={lineupRef}
               className="flex pt-8 w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             >
-              <div className="h-96 w-full bg-white rounded-[20px] flex items-center justify-center flex-shrink-0">
+              <div className="relative h-[480px] w-[1260px] bg-white rounded-[20px] overflow-hidden flex-shrink-0">
                 <img
-                  src="/images/iPhone/ac_video_poster_960x540_2x.jpg"
-                  className="w-full h-full object-contain rounded-2xl"
+                  src="/images/iPhone/guided_tour__e70yvshmbb2i_medium_2x.jpg"
+                  alt="Guided Tour"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
+
+                <div className="absolute inset-0 z-10 flex flex-col justify-center pl-20">
+                  <p className="text-[#1d1d1f] text-[28px] font-semibold leading-tight">
+                    A Guided Tour of <br />
+                    iPhone 17 Pro, iPhone Air, <br />
+                    and iPhone 17
+                  </p>
+
+                  <button className="mt-8 w-fit rounded-full bg-black text-white px-6 py-3 text-[17px] ">
+                    Watch the film
+                  </button>
+                </div>
               </div>
-              
             </div>
           </div>
 
           {/* Products */}
           <section className="bg-[#f5f5f7] w-full px-32">
             {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex justify-between items-end mb-10">
-              <h2
-                className="text-[48px] font-bold text-[#1d1d1f] "
-              >
+            <div className="max-w-[1440px]  flex justify-between items-end  mb-10 leading-tight">
+              <h2 className="text-[48px] font-bold text-[#1d1d1f] ">
                 Why Apple is the best
                 <br />
                 place to buy iPhone.
@@ -500,14 +513,14 @@ function iPhone() {
           hover:underline
           "
               >
-                Shop Mac ›
+                Shop iPhone ›
               </a>
             </div>
 
             {/* Cards */}
             <div
               ref={scrollRef}
-              className="flex gap-4 overflow-x-auto pl-[calc((100vw-1322px)/2)] pr-10 scroll-smooth no-scrollbar "
+              className="flex gap-4 overflow-x-auto  pr-10 scroll-smooth no-scrollbar "
             >
               {products.map((item, index) => (
                 <div
@@ -593,63 +606,20 @@ function iPhone() {
                 </div>
               ))}
             </div>
-
-            {/* Arrows */}
-            <div
-              className="
-        max-w-[1322px]
-        mx-auto
-        flex
-        justify-center
-        gap-3
-        mt-6
-      "
-            >
-              <button
-                onClick={() => scroll("left")}
-                className="
-          w-9
-          h-9
-          rounded-full
-          bg-[#e8e8ed]
-          flex
-          items-center
-          justify-center
-          text-[#86868b]
-          "
-              >
-                <ChevronLeft size={18} />
-              </button>
-
-              <button
-                onClick={() => scroll("right")}
-                className="
-          w-9
-          h-9
-          rounded-full
-          bg-[#e8e8ed]
-          flex
-          items-center
-          justify-center
-          text-[#1d1d1f]
-          "
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
           </section>
 
           <section className="bg-[#f5f5f7] w-full">
             {/* Header */}
-            <div className="max-w-[1440px] mx-auto flex pt-4 px-32 py-12">
+            <div className="max-w-[1440px]  flex pt-4 px-32 py-12">
               <h2 className="text-[48px] font-bold text-[#1d1d1f]">
-                Get to Know iPad.
+                Get to Know iPhone.
               </h2>
             </div>
 
             {/* Cards */}
 
-            <div ref={scrollRef}
+            <div
+              ref={scrollRef}
               className=" px-32
     flex
     flex-row
@@ -719,16 +689,69 @@ function iPhone() {
                 </div>
               ))}
             </div>
+            {/* Arrows */}
+            <div
+              className="
+        max-w-[1322px]
+        mx-auto
+        flex
+        justify-center
+        gap-3
+        mt-6
+      "
+            >
+              <button
+                onClick={() => scroll("left")}
+                className="
+          w-9
+          h-9
+          rounded-full
+          bg-[#e8e8ed]
+          flex
+          items-center
+          justify-center
+          text-[#86868b]
+          "
+              >
+                <ChevronLeft size={18} />
+              </button>
+
+              <button
+                onClick={() => scroll("right")}
+                className="
+          w-9
+          h-9
+          rounded-full
+          bg-[#e8e8ed]
+          flex
+          items-center
+          justify-center
+          text-[#1d1d1f]
+          "
+              >
+                <ChevronRight size={18} />
+              </button>
+            </div>
           </section>
 
-          
+          {/* BigCard */}
+          <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
+            <p className="text-[#1d1d1f] text-[48px] font-semibold ">
+              iPhone Essentials.
+            </p>
+            <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
+              {bigCards.map((card) => (
+                <BigCard className="" key={card.id} {...card} />
+              ))}
+            </div>
+          </div>
           <section className="bg-white py-24">
             {/* Header */}
 
             <div className="max-w-auto px-32">
               <div className="flex justify-between items-center">
                 <h2 className="text-[48px] font-semibold text-[#1d1d1f] tracking-[-0.02em]">
-                  Significant others.
+                  Privacy. That is iPhone
                 </h2>
 
                 <button className="text-[#0066cc] text-[17px] hover:underline">

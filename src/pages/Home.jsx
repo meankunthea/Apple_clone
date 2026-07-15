@@ -209,7 +209,7 @@ export default function Home() {
 
             <div className="absolute top-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-center gap-2">
               <img
-                src="/images/home/promo_logo_ipad_air__dqdj4ni03quu_small_2x.png"
+                src="/images/home/promo_logo_ipad_air__dqdj4ni03quu_medium_2x.png"
                 alt="Logo"
                 className="w-28 "
               />
@@ -367,7 +367,7 @@ export default function Home() {
         <div className="mt-3 w-full h-[957px] overflow-hidden">
           <h1 className="text-6xl text-center pt-10">Endless entertainment.</h1>
           {/* Big slide section */}
-          <div className="mt-8 px-5">
+          <div className="mt-8 px-5 gap-5">
             <Swiper
               modules={[Autoplay]}
               slidesPerView={3}
