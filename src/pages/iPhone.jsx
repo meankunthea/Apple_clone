@@ -1,6 +1,9 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 import Navbar from "../components/Navbar";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
 import BigCard from "../components/BigProductCard";
@@ -278,6 +281,7 @@ function iPhone() {
   const [activeTab, setActiveTab] = useState("All products");
   const [activeFeature, setActiveFeature] = useState(0);
 
+  
   const categoryRef = useRef(null);
   const lineupRef = useRef(null);
   const scrollRef = useRef(null);
@@ -337,7 +341,7 @@ function iPhone() {
         </div>
 
         <main className="flex w-full max-w-full relative z-0 flex-col gap-12 overflow-x-hidden">
-          {/* Mac Text */}
+          {/* Iphone Text */}
           <div className="w-full bg-[#f5f5f7]">
             <div className="flex h-[228px] w-full items-center px-32 bg-white">
               <div className=" ">
@@ -815,6 +819,93 @@ function iPhone() {
           </section>
         </main>
       </div>
+      <div className="w-full bg-[#fafafc]">
+        <div className="max-w-[980px] mx-auto flex gap-24 pt-16 pb-50">
+          {/* Column 1 */}
+          <div className="min-w-[190px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">Explore iPhone</p>
+
+            <ul className="space-y-[6px]">
+              {[
+                "Explore All iPhone",
+                "iPhone 17 Pro",
+                "iPhone Air",
+                "iPhone 17",
+                "iPhone 17e",
+                "iPhone 16",
+                "Compare iPhone",
+                "Switch from Andriod",
+                
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[36px] leading-[1.15] font-semibold text-[#1d1d1f] cursor-pointer hover:text-black"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 space-y-3">
+              <p className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer">
+                Compare iPhone
+              </p>
+
+             
+            </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="min-w-[120px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">Shop iPhone</p>
+
+            <ul className="space-y-3">
+              {[
+                "Shop iPhone",
+                "iPhone Accessories",
+                "Apple Trade In",
+                "Carrier Deals at Apple",
+                "Financing",
+                "Personal Setup",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div className="min-w-[200px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">More from iPhone</p>
+
+            <ul className="space-y-3">
+              {[
+                "iPhone Support",
+                "AppleCare",
+                "IOS 27 Preview",
+                "Apple Intelligence and Siri",
+                "Apps by Apple",
+                "iPhone Privacy",
+                "Better with iPhone",
+                "iCloud+",
+                "Education",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <Footer/>
     </div>
   );
 }

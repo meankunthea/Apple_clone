@@ -315,7 +315,7 @@ function iPad() {
     });
   };
   return (
-    <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2">
+    <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2 bg-[#f5f5f7]">
       <Navbar />
       <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f5f5f7] mx-auto pt-12 ">
         <div className="w-full h-[58px] flex items-center justify-center border-b border-gray-100 bg-white text-center ">
@@ -782,6 +782,90 @@ function iPad() {
             </div>
           </section>
         </main>
+      </div>
+
+      <div className="w-full bg-[#fafafc]">
+        <div className="max-w-[980px] mx-auto flex gap-24 pt-16 pb-50">
+          {/* Column 1 */}
+          <div className="min-w-[190px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">Explore iPad</p>
+
+            <ul className="space-y-[6px]">
+              {[
+                "Explore All iPad",
+                "iPad Pro",
+                "iPad Air",
+                "iPad",
+                "iPad mini",
+                "Apple Pencil",
+                "Keyboards",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[36px] leading-[1.15] font-semibold text-[#1d1d1f] cursor-pointer hover:text-black"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 space-y-3">
+              <p className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer">
+                Compare iPad
+              </p>
+
+             
+            </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="min-w-[120px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">Shop Mac</p>
+
+            <ul className="space-y-3">
+              {[
+                "Shop iPad",
+                "iPad Accessories",
+                "Apple Trade In",
+                "Financing",
+                "Personal Setup",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div className="min-w-[200px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">More from Mac</p>
+
+            <ul className="space-y-3">
+              {[
+                "iPad Support",
+                "AppleCare",
+                "iPadOS 27 Preview",
+                "Apple Intelligence and Siri",
+                "Apps by Apple",
+                "Apple Creator Studio",
+                "Better with iPhone",
+                "iCloud+",
+                "Education",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
       <Footer/>
     </div>

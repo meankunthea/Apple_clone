@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-
+// import BigProductCard from "../components/BigProductCard";
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
-import BigCard from "../components/BigProductCard";
+// import BigCard from "../components/BigProductCard";
 // import MacDropdown from "../components/MacDropdown";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
 const categories = [
   { name: "MacBook Neo", image: "/images/Mac/education_bdd3e67fa_2x.jpg" },
@@ -203,12 +203,12 @@ const product = [
     id: 2,
     titleSmall: "Built For AI",
     title: (
-  <>
-    Smart. Secure.
-    <br />
-    On Device.
-  </>
-),
+      <>
+        Smart. Secure.
+        <br />
+        On Device.
+      </>
+    ),
     image: "/images/Mac/fc_intelligence_69d4bf8c2_2x.jpg",
     textColor: "text-white",
   },
@@ -223,12 +223,12 @@ const product = [
     id: 4,
     titleSmall: "Mac + iPhone",
     title: (
-  <>
-    Together they
-    <br />
-    work wonders.
-  </>
-),
+      <>
+        Together they
+        <br />
+        work wonders.
+      </>
+    ),
     image: "/images/Mac/fc_iphone_1a4c9f1e5_2x.jpg",
     textColor: "text-[#1d1d1f]",
   },
@@ -236,12 +236,12 @@ const product = [
     id: 5,
     titleSmall: "Compatibility",
     title: (
-  <>
-    Mac run your
-    <br />
-   Favorite app.
-  </>
-),
+      <>
+        Mac run your
+        <br />
+        Favorite app.
+      </>
+    ),
     desc: "Choose your chip, memory, storage, even color.",
     image: "/images/Mac/fc_compatibility_e94c0f8a8_2x.jpg",
     textColor: "text-[#1d1d1f]",
@@ -266,43 +266,6 @@ const product = [
     title: "Get flexible delivery and\neasy pickup.",
     image: "/images/Mac/fc_values_e5b10a05a_2x.jpg",
     textColor: "text-white",
-  },
-];
-
-// BigCard
-const bigCards = [
-  {
-    id: 1,
-    title: "Give us the old. \nSave on the new",
-    description: "With Apple trand in, you can get a great value of your currecnt device and apply it for credit, we'll recycle it for free.",
-    subtitle: "See what your device is worth >",
-    image: "/images/Mac/trade_in_f0404b799_2x.png",
-    
-  },
-  {
-    id: 2,
-    title: "Mac does that.",
-    description: "See how easy it is to move to Mac.",
-    image: "/images/Mac/mac_does_that_118f02192_2x.png",
-    subtitle: "Learn more >",
-  },
-];
-
-const bigCard = [
-  {
-    id: 1,
-    title: "Mac accessoreis",
-    description: "Explore keyboards, mice, and other essentials",
-    subtitle: "Shop Mac accessories >",
-    image: "/images/Mac/accessories_d945ccf53_2x.png",
-    
-  },
-  {
-    id: 2,
-    title: "Mac does that.",
-    description: "See how easy it is to move to Mac.",
-    image: "/images/Mac/studio_display_5624b03ba_2x.jpg",
-    subtitle: "Learn more >",
   },
 ];
 
@@ -691,7 +654,6 @@ function Mac() {
       "
                   style={{
                     backgroundImage: `url(${product.image})`,
-                    
                   }}
                 >
                   {/* Card content */}
@@ -784,28 +746,154 @@ function Mac() {
           </section>
 
           {/* BigCard 1 */}
-          <div className="h-auto bg-[#f5f5f7] pt-12   px-32">
-            <p className="text-[#1d1d1f] text-[48px] font-semibold ">
-              Switch to Mac.
-            </p>
-            <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
-              {bigCards.map((card) => (
-                <BigCard className="" key={card.id} {...card} />
-              ))}
-            </div>
-          </div>
+          <section className="bg-[#f5f5f7] pl-30">
+            <div className="w-full mx-auto">
+              <h2 className="text-[48px] font-semibold text-[#1d1d1f] mb-10">
+                Switch to Mac.
+              </h2>
 
-          {/* BigCard 2*/}
-          <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
-            <p className="text-[#1d1d1f] text-[48px] font-semibold ">
-              Mac Essentials.
-            </p>
-            <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
-              {bigCard.map((card) => (
-                <BigCard className="" key={card.id} {...card} />
-              ))}
+              <div className="w-full flex gap-5">
+                {/* Left Card */}
+                <div className="w-[620px] h-[617px] bg-white rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Content */}
+                    <div className="px-10 pt-12 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        Give us the the old. Save on <br /> the new.
+                      </h3>
+
+                      <p className="mt-2 text-[17px] leading-[28px] text-[#1d1d1f]">
+                        With Apple Trade In, you can get a great value for <br /> your current device and apply it toward a new one.
+
+                        <br /> If your device is not eligible for credit, we will recycle it <br /> for free.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        See what your device is worth &gt;
+                      </a>
+                    </div>
+
+                    {/* Bottom Image */}
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/Mac/trade_in_f0404b799_2x.png"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* Right Card */}
+                <div className="w-[620px] h-[617px] bg-white rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Content */}
+                    <div className="px-10 pt-12 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        Mac does that.
+                      </h3>
+
+                      <p className="mt-2   text-[17px] leading-[28px] text-[#1d1d1f]">
+                        See how easy it is to move to Mac.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Learn more &gt;
+                      </a>
+                    </div>
+
+                    {/* Bottom Image */}
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/Mac/mac_does_that_118f02192_2x.png"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
+           {/* BigCard 2 */}
+          <section className="bg-[#f5f5f7] pl-30">
+            <div className="w-full mx-auto">
+              <h2 className="text-[48px] font-semibold text-[#1d1d1f] mb-10">
+                Mac Essentials.
+              </h2>
+
+              <div className="w-full flex gap-5">
+                {/* Left Card */}
+                <div className="w-[620px] h-[617px] bg-white rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Content */}
+                    <div className="px-10 pt-12 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        Mac Accessories
+                      </h3>
+
+                      <p className="mt-2 text-[17px] leading-[28px] text-[#1d1d1f]">
+                        Explore keyboards, mice, and other essentials.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Shop mac accessories &gt;
+                      </a>
+                    </div>
+
+                    {/* Bottom Image */}
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/Mac/accessories_d945ccf53_2x.png"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* Right Card */}
+                <div className="w-[620px] h-[617px] bg-white rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Content */}
+                    <div className="px-10 pt-12 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        Studio Display
+                      </h3>
+
+                      <p className="mt-2   text-[17px] leading-[28px] text-[#1d1d1f]">
+                        The 27 inch 5k Retina display pairs beautifully <br />with Mac.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Learn more &gt;
+                      </a>
+                    </div>
+
+                    {/* Bottom Image */}
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/Mac/studio_display_5624b03ba_2x.jpg"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="bg-white py-24">
             {/* Header */}
 
@@ -876,7 +964,96 @@ function Mac() {
           </section>
         </main>
       </div>
-      <Footer/>
+
+      <div className="w-full bg-[#fafafc]">
+        <div className="max-w-[980px] mx-auto flex gap-24 pt-16 pb-50">
+          {/* Column 1 */}
+          <div className="min-w-[190px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">Explore Mac</p>
+
+            <ul className="space-y-[6px]">
+              {[
+                "Explore All Mac",
+                "MacBook Neo",
+                "MacBook Air",
+                "MacBook Pro",
+                "iMac",
+                "Mac mini",
+                "Mac Studio",
+                "Displays",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[36px] leading-[1.15] font-semibold text-[#1d1d1f] cursor-pointer hover:text-black"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 space-y-3">
+              <p className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer">
+                Compare Mac
+              </p>
+
+              <p className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer">
+                Switch from PC to Mac
+              </p>
+            </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="min-w-[120px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">Shop Mac</p>
+
+            <ul className="space-y-3">
+              {[
+                "Shop Mac",
+                "Mac Accessories",
+                "Apple Trade In",
+                "Financing",
+                "Personal Setup",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div className="min-w-[200px]">
+            <p className="text-[12px] text-[#6e6e73] mb-3">More from Mac</p>
+
+            <ul className="space-y-3">
+              {[
+                "Mac Support",
+                "AppleCare",
+                "macOS 27 Preview",
+                "Apple Intelligence and Siri",
+                "Apps by Apple",
+                "Apple Creator Studio",
+                "Better with iPhone",
+                "iCloud+",
+                "Mac for Business",
+                "Education",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
