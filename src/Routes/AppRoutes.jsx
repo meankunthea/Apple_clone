@@ -4,7 +4,6 @@ import Store from "../pages/Store";
 import Mac from "../pages/Mac";
 import IPad from "../pages/iPad";
 import IPhone from "../pages/iPhone";
-
 import ProductDetailScreen from "../components/ProductDetailScreen";
 
 function AppRoutes() {

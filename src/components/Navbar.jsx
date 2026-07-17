@@ -281,13 +281,13 @@ const Navbar = () => {
           />
         </div>
 
-        <Link to="/watch" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Watch</Link>
-        <Link to="/vision" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Vision</Link>
-        <Link to="/airpods" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>AirPods</Link>
-        <Link to="/tv-home" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>TV & Home</Link>
-        <Link to="/entertainment" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Entertainment</Link>
-        <Link to="/accessories" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Accessories</Link>
-        <Link to="/support" className="text-[#1d1d1f] text-[12px] hover:text-black" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Support</Link>
+        <Link to="#" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Watch</Link>
+        <Link to="#" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Vision</Link>
+        <Link to="#" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>AirPods</Link>
+        <Link to="#" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>TV & Home</Link>
+        <Link to="#" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Entertainment</Link>
+        <Link to="#" className="text-[12px] text-[#6E6E73] hover:text-[#1d1d1f]" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Accessories</Link>
+        <Link to="#" className="text-[#1d1d1f] text-[12px] hover:text-black" onClick={() => { closeIPhone(); closeIPad(); closeMac(); closeStore(); }}>Support</Link>
 
         <button className="hover:text-black">
           <img className="w-4 h-4" src="/images/home/search_icon.png" alt="search" />
