@@ -109,13 +109,7 @@ const StoreDropdown = ({ isOpen, onMouseEnter, onMouseLeave, onItemClick }) => {
               >
                 Financing
               </Link>
-              <Link
-                to="/store"
-                className="block text-[12px] text-[#333336] font-semibold"
-                onClick={onItemClick}
-              >
-                Financing
-              </Link>
+              
               <Link
                 to="/store"
                 className="block text-[12px] text-[#333336] font-semibold"

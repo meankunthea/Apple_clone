@@ -739,16 +739,80 @@ function iPhone() {
           </section>
 
           {/* BigCard */}
-          <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
-            <p className="text-[#1d1d1f] text-[48px] font-semibold ">
-              iPhone Essentials.
-            </p>
-            <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
-              {bigCards.map((card) => (
-                <BigCard className="" key={card.id} {...card} />
-              ))}
+         <section className="bg-[#f5f5f7] pl-30">
+            <div className="w-full mx-auto">
+              <h2 className="text-[48px] font-semibold text-[#1d1d1f] mb-10">
+                iPhone Essencials.
+              </h2>
+
+              <div className="w-full flex gap-5">
+                {/* Left Card */}
+                <div className="w-[620px] h-[617px] bg-[#f5f5f7] rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Content */}
+                    <div className="px-10 pt-12 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        iPhone Accessories
+                      </h3>
+
+                      <p className="mt-2 text-[17px] leading-[28px] text-[#1d1d1f]">
+                        Protect and personalize you iPhone with fresh accessories like colorfulcases <br />
+                        the crossbody strap, and more.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Shop iPhone accessories &gt;
+                      </a>
+                    </div>
+
+                    {/* Bottom Image */}
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/iPhone/accessories__ghgqo4vsxcqe_large.jpg"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* Right Card */}
+                <div className="w-[620px] h-[617px] bg-[#f5f5f7] rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Text */}
+                    
+                    <div className="px-10 pt-12 pb-6 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        AirTag
+                      </h3>
+
+                      <p className="mt-2   text-[17px] leading-[28px] text-[#1d1d1f]">
+                        Now with 50% louder speaker and up to 1.5x <br />greater Precicion Finding range, it easier than <br />ever to keep track of what matters.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Buy &gt;
+                      </a>
+                    </div>
+
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/iPhone/airtag_accessories__kpd2m3mfy4ia_large.jpg"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
+
           <section className="bg-white py-24">
             {/* Header */}
 

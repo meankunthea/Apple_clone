@@ -34,7 +34,7 @@ const ProductDetailScreen = () => {
               className="rounded-full bg-[#0071e3] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0077ed]"
             >
               Buy
-            </Link>
+            </Link> 
             <Link
               to="/"
               className="rounded-full border border-[#d2d2d7] px-6 py-2.5 text-sm font-semibold text-[#0071e3] transition hover:bg-[#f5f5f7]"

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { ChevronLeft, ChevronRight, ChevronUp, Plus } from "lucide-react";
 import BigCard from "../components/BigProductCard";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 
 const categories = [
   { name: "iPad Pro", image: "/images/iPad/ipad_pro_bd732ab83_2x.png" },
@@ -227,8 +227,7 @@ const bigCards = [
   {
     id: 1,
     title: "Apple Pencil",
-    description:
-      "Dream it up. Jot it down.",
+    description: "Dream it up. Jot it down.",
     image: "/images/iPad/pencil_afee11a20_2x.png",
     subtitle: "Learn more >",
   },
@@ -315,7 +314,7 @@ function iPad() {
     });
   };
   return (
-    <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2 bg-[#f5f5f7]">
+    <div className="flex flex-col items-center w-full min-h-screen overflow-x-hidden py-2 bg-[#f5f5f7] ">
       <Navbar />
       <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f5f5f7] mx-auto pt-12 ">
         <div className="w-full h-[58px] flex items-center justify-center border-b border-gray-100 bg-white text-center ">
@@ -327,8 +326,8 @@ function iPad() {
           </a>
         </div>
 
-        <main className="flex w-full max-w-full relative z-0 flex-col gap-12 overflow-x-hidden">
-          {/* Mac Text */}
+        <main className="flex w-full max-w-full relative z-0 flex-col gap-12 overflow-x-hidden ">
+          {/* iPad Text */}
           <div className="w-full bg-[#f5f5f7]">
             <div className="flex h-[228px] w-full items-center px-32 bg-white">
               <div className=" ">
@@ -386,10 +385,8 @@ function iPad() {
 
             {/* Tabs */}
 
-           
-
             {/* Products */}
-            
+
             <div
               ref={lineupRef}
               className="flex w-full max-w-full gap-10 overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -702,17 +699,79 @@ function iPad() {
             </div>
           </section>
 
-          {/* BigCard */}
-          <div className="h-auto bg-[#f5f5f7] pt-12 px-32">
-            <p className="text-[#1d1d1f] text-[48px] font-semibold ">
-              iPad Essentials.
-            </p>
-            <div className="flex gap-5 overflow-x-auto no-scrollbar pt-10">
-              {bigCards.map((card) => (
-                <BigCard className="" key={card.id} {...card} />
-              ))}
+          {/* BigCard 1 */}
+          <section className="bg-[#f5f5f7] pl-30">
+            <div className="w-full mx-auto">
+              <h2 className="text-[48px] font-semibold text-[#1d1d1f] mb-10">
+                iPad Essencials.
+              </h2>
+
+              <div className="w-full flex gap-5">
+                {/* Left Card */}
+                <div className="w-[620px] h-[617px] bg-white rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Content */}
+                    <div className="px-10 pt-12 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        Apple Pencil
+                      </h3>
+
+                      <p className="mt-2 text-[17px] leading-[28px] text-[#1d1d1f]">
+                        Dream it up. Jot it down.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Learn more&gt;
+                      </a>
+                    </div>
+
+                    {/* Bottom Image */}
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/iPad/pencil_afee11a20_2x.png"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+                {/* Right Card */}
+                <div className="w-[620px] h-[617px] bg-white rounded-[28px] overflow-hidden">
+                  <div className="h-full flex flex-col">
+                    {/* Top Text */}
+                    
+                    <div className="px-10 pt-12 pb-6 text-center">
+                      <h3 className="text-[32px] leading-[44px] font-semibold text-[#1d1d1f]">
+                        Keyboards for iPad
+                      </h3>
+
+                      <p className="mt-2   text-[17px] leading-[28px] text-[#1d1d1f]">
+                        Type it out. Take it with you.
+                      </p>
+
+                      <a
+                        href="#"
+                        className="inline-block mt-2 text-[17px] text-[#0066CC] hover:underline"
+                      >
+                        Learn more &gt;
+                      </a>
+                    </div>
+
+                    <div className="flex-1 flex items-end">
+                      <img
+                        src="/images/iPad/keyboard_d02dc03ac_2x.png"
+                        alt=""
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
           <section className="bg-white py-24">
             {/* Header */}
 
@@ -813,8 +872,6 @@ function iPad() {
               <p className="text-[17px] font-medium text-[#1d1d1f] cursor-pointer">
                 Compare iPad
               </p>
-
-             
             </div>
           </div>
 
@@ -867,7 +924,7 @@ function iPad() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
